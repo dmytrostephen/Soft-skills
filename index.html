@@ -10,277 +10,444 @@
   <meta property="og:title" content="Dmytro Stephen | Soft Skills Mastery for Pragmatic Professionals" />
   <meta property="og:description" content="Practical, business-oriented training in communication, leadership, collaboration, negotiation, and human skills for the AI era." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#17243b" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2317243b'/%3E%3Ctext x='50' y='63' text-anchor='middle' font-size='46' font-family='Arial' font-weight='700' fill='white'%3EDS%3C/text%3E%3C/svg%3E" />
+  <meta property="og:image" content="https://www.dmytrosoftskills.com/dmytro.jpg" />
+  <meta name="theme-color" content="#fffdf9" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%2317243b'/%3E%3Ctext x='50' y='64' text-anchor='middle' font-size='44' font-family='Georgia,serif' fill='%23fffdf9'%3EDS%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Literata:opsz,wght@7..72,400;7..72,500&display=swap" rel="stylesheet" />
+  <link rel="preload" as="image" href="dmytro.webp" type="image/webp" />
+  <script>document.documentElement.classList.add("js")</script>
   <style>
+    /* Unslopped with unslop by Damir Sokolovsky (@heydamir), CC BY 4.0, github.com/heydamir/unslop */
     :root{
+      /* warm paper ramp */
+      --bg:#fffdf9;
+      --bg-alt:#f7f4ee;
+      --card:#ffffff;
+      --raised:#efe9df;
+      /* ink */
       --ink:#17243b;
-      --ink-2:#2f3f56;
-      --muted:#657287;
-      --paper:#f7f4ee;
-      --paper-2:#fffdf9;
+      --ink-hover:#24334f;
+      --text-2:#3d4a5e;
+      --muted:#626e82;
+      --line:rgba(23,36,59,.1);
+      --line-strong:rgba(23,36,59,.16);
+      /* one marker */
       --accent:#df6f3d;
-      --accent-2:#f1c15b;
-      --line:#ddd7cc;
-      --white:#ffffff;
-      --radius:22px;
-      --shadow:0 18px 45px rgba(23,36,59,.11);
-      --max:1180px;
+      --accent-ink:#b4521f;
+      /* dark section */
+      --dark-2:#b9c2d1;
+      --dark-line:rgba(255,255,255,.12);
+
+      --serif:"Literata", Georgia, "Times New Roman", serif;
+      --sans:"Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+      --ease:cubic-bezier(.22,1,.36,1);
+      --max:1200px;
+      --pad:32px;
     }
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
+    html{scroll-behavior:smooth; scroll-padding-top:64px}
     body{
-      margin:0;
-      color:var(--ink);
-      background:var(--paper-2);
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      line-height:1.6;
-      -webkit-font-smoothing:antialiased;
+      margin:0; color:var(--ink); background:var(--bg);
+      font-family:var(--sans); font-size:16px; line-height:1.6;
+      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
     }
     a{color:inherit}
-    img{max-width:100%}
-    .wrap{width:min(calc(100% - 40px), var(--max)); margin-inline:auto}
-    .nav-shell{
-      position:sticky; top:0; z-index:50;
-      background:rgba(255,253,249,.9);
-      backdrop-filter:blur(16px);
-      border-bottom:1px solid rgba(221,215,204,.8);
-    }
-    nav{
-      height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px;
-    }
-    .brand{display:flex; align-items:center; gap:12px; text-decoration:none; font-weight:800; letter-spacing:-.02em}
-    .monogram{
-      width:42px; height:42px; display:grid; place-items:center; border-radius:12px;
-      color:#fff; background:var(--ink); font-size:14px; letter-spacing:.05em;
-    }
-    .brand small{display:block; color:var(--muted); font-weight:600; font-size:11px; letter-spacing:.03em}
-    .nav-links{display:flex; align-items:center; gap:24px}
-    .nav-links a{font-size:14px; text-decoration:none; color:var(--ink-2); font-weight:650}
-    .lang-toggle{display:flex; background:var(--paper); border:1px solid var(--line); padding:3px; border-radius:999px}
-    .lang-toggle button{
-      border:0; background:transparent; padding:7px 10px; border-radius:999px; cursor:pointer;
-      font:inherit; font-size:12px; font-weight:800; color:var(--muted)
-    }
-    .lang-toggle button.active{background:var(--ink); color:#fff}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:9px;
-      min-height:48px; padding:0 20px; border-radius:999px; text-decoration:none;
-      font-weight:800; border:1px solid transparent; transition:.2s ease; cursor:pointer;
-    }
-    .btn:hover{transform:translateY(-1px)}
-    .btn-primary{background:var(--accent); color:#fff; box-shadow:0 10px 25px rgba(223,111,61,.25)}
-    .btn-primary:hover{background:#cf6032}
-    .btn-secondary{background:transparent; border-color:var(--line); color:var(--ink)}
-    .hero{
-      position:relative; overflow:hidden; padding:94px 0 70px;
-      background:
-        radial-gradient(circle at 90% 12%, rgba(241,193,91,.28), transparent 29%),
-        radial-gradient(circle at 0% 85%, rgba(223,111,61,.12), transparent 31%),
-        var(--paper-2);
-    }
-    .hero-grid{display:grid; grid-template-columns:1.2fr .8fr; gap:70px; align-items:center}
-    .eyebrow{
-      display:inline-flex; align-items:center; gap:9px; font-size:12px; text-transform:uppercase;
-      letter-spacing:.14em; font-weight:850; color:var(--accent); margin-bottom:20px;
-    }
-    .eyebrow:before{content:""; width:30px; height:2px; background:currentColor}
-    h1,h2,h3{line-height:1.06; margin:0; letter-spacing:-.035em}
-    h1{font-size:clamp(48px,7vw,84px); max-width:900px}
-    h1 .accent{color:var(--accent)}
-    .hero-copy{font-size:clamp(18px,2vw,22px); color:var(--ink-2); max-width:760px; margin:24px 0 0}
-    .hero-sub{font-size:15px; color:var(--muted); max-width:690px; margin:16px 0 0}
-    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:30px}
-    .hero-card{
-      background:var(--ink); color:#fff; border-radius:32px; padding:30px; box-shadow:var(--shadow);
-      min-height:430px; display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden;
-    }
-    .hero-card:before{
-      content:""; position:absolute; width:240px; height:240px; border-radius:50%;
-      right:-70px; top:-70px; background:rgba(241,193,91,.18)
-    }
-    .hero-card .label{font-size:12px; text-transform:uppercase; letter-spacing:.13em; color:#b9c2d1; font-weight:800}
-    .quote{font-family:Georgia, serif; font-size:29px; line-height:1.28; letter-spacing:-.02em; position:relative; z-index:1}
-    .quote strong{color:var(--accent-2); font-weight:500}
-    .signature{font-weight:800; font-size:14px}
-    .signature span{display:block; color:#b9c2d1; font-weight:600; margin-top:4px}
-    .proofbar{border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:#fff}
-    .proofgrid{display:grid; grid-template-columns:repeat(3,1fr)}
-    .proofitem{padding:24px 30px; border-right:1px solid var(--line)}
-    .proofitem:first-child{padding-left:0}.proofitem:last-child{border-right:0}
-    .proofitem strong{display:block; font-size:22px; letter-spacing:-.03em}
-    .proofitem span{font-size:13px; color:var(--muted)}
-    section{padding:96px 0}
-    #faq{
-  padding-top:0;
-}
+    img{max-width:100%; display:block}
+    p{margin:0}
+    .wrap{width:100%; max-width:calc(var(--max) + var(--pad)*2); margin-inline:auto; padding-inline:var(--pad)}
+    :focus-visible{outline:2px solid var(--accent-ink); outline-offset:2px; border-radius:4px}
 
-.section-head{
-  display:grid;
-  grid-template-columns:.7fr 1.3fr;
-  gap:50px;
-  align-items:start;
-  margin-bottom:44px
-}
-    .section-head{display:grid; grid-template-columns:.7fr 1.3fr; gap:50px; align-items:start; margin-bottom:44px}
-    .kicker{font-size:12px; color:var(--accent); text-transform:uppercase; letter-spacing:.14em; font-weight:850; margin-bottom:10px}
-    h2{font-size:clamp(36px,4.5vw,58px)}
-    .lead{font-size:19px; color:var(--ink-2); max-width:720px; margin:0}
-    .muted{color:var(--muted)}
-    .reality{background:var(--paper)}
-    .reality-grid{display:grid; grid-template-columns:1fr 1fr; gap:26px}
-    .statement{
-      border-radius:var(--radius); background:var(--white); padding:34px; border:1px solid var(--line)
+    .i{width:18px; height:18px; flex:0 0 18px; fill:none; stroke:currentColor; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round}
+    .i-sm{width:16px; height:16px; flex-basis:16px}
+
+    /* type */
+    h1,h2,h3{margin:0; font-weight:400}
+    h1,h2{font-family:var(--serif); color:var(--ink); text-wrap:balance}
+    h1{font-size:64px; line-height:1.06; letter-spacing:-.02em; font-weight:400}
+    h2{font-size:40px; line-height:1.15; letter-spacing:-.01em}
+    h3{font-family:var(--sans); font-size:18px; line-height:1.4; font-weight:500}
+    .lead{font-size:18px; line-height:1.65; color:var(--text-2); max-width:40em}
+
+    /* signature: one orange marker stroke */
+    .mark{
+      background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'%3E%3Cpath d='M2 8.5C40 5.5 92 4 140 5.2s46 1.4 58 .6' fill='none' stroke='%23df6f3d' stroke-width='5' stroke-linecap='round' opacity='.9'/%3E%3C/svg%3E") no-repeat left bottom / 100% .24em;
+      padding-bottom:.06em;
+      -webkit-box-decoration-break:clone; box-decoration-break:clone;
     }
-    .statement.big{background:var(--ink); color:#fff; border-color:var(--ink)}
-    .statement h3{font-size:28px; margin-bottom:12px}
-    .statement p{margin:0; color:var(--muted)}
-    .statement.big p{color:#c7cfda; font-size:18px}
-    .statement.big strong{color:var(--accent-2)}
-    .chips{display:flex; flex-wrap:wrap; gap:9px; margin-top:20px}
-    .chip{border:1px solid var(--line); background:#fff; border-radius:999px; padding:8px 12px; font-size:12px; font-weight:750}
-    .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
-    .card{
-      border:1px solid var(--line); border-radius:var(--radius); padding:28px; background:#fff;
-      transition:.2s ease; min-height:100%;
+
+    /* buttons */
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      height:48px; padding:0 20px; border-radius:8px; border:1px solid transparent;
+      font:500 15px/1 var(--sans); text-decoration:none; cursor:pointer; white-space:nowrap;
+      transition:background-color .15s var(--ease), border-color .15s var(--ease), color .15s var(--ease), transform .12s var(--ease);
     }
-    .card:hover{transform:translateY(-3px); box-shadow:var(--shadow)}
-    .num{font-size:12px; color:var(--accent); font-weight:900; letter-spacing:.1em}
-    .card h3{font-size:25px; margin:18px 0 10px}
-    .card p{color:var(--muted); margin:0}
-    .card .mini{font-size:12px; color:var(--ink-2); font-weight:800; margin-top:22px; text-transform:uppercase; letter-spacing:.09em}
-    .module-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
-    .module{
-      border:1px solid var(--line); border-radius:var(--radius); padding:30px; background:var(--paper-2)
+    .btn:active{transform:scale(.98)}
+    .btn-primary{background:var(--ink); color:#fff; box-shadow:inset 0 1px 0 rgba(255,255,255,.1)}
+    .btn-primary:hover{background:var(--ink-hover)}
+    .btn-secondary{background:transparent; border-color:var(--line-strong); color:var(--ink)}
+    .btn-secondary:hover{background:var(--bg-alt)}
+    .btn-sm{height:36px; padding:0 16px; font-size:14px}
+    .btn .i{opacity:.7}
+
+    /* nav */
+    .nav-shell{position:sticky; top:0; z-index:50; background:rgba(255,253,249,.94); backdrop-filter:saturate(1.2) blur(12px); border-bottom:1px solid var(--line)}
+    nav{height:64px; display:flex; align-items:center; justify-content:space-between; gap:24px}
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+    .monogram{width:32px; height:32px; display:grid; place-items:center; border-radius:8px; background:var(--ink); color:var(--bg); font:400 14px/1 var(--serif)}
+    .brand-text{display:flex; flex-direction:column; font-weight:500; font-size:15px; line-height:20px}
+    .brand-text small{font-size:12px; line-height:16px; font-weight:400; color:var(--muted)}
+    .nav-links{display:flex; align-items:center; gap:4px}
+    .nav-links > a:not(.btn){font-size:14px; text-decoration:none; color:var(--text-2); padding:8px 12px; border-radius:8px; transition:color .15s var(--ease), background-color .15s var(--ease)}
+    .nav-links > a:not(.btn):hover{color:var(--ink); background:var(--bg-alt)}
+    .nav-right{display:flex; align-items:center; gap:12px; margin-left:12px}
+    .lang-toggle{display:flex; gap:2px; padding:2px; border-radius:8px; background:var(--bg-alt); border:1px solid var(--line)}
+    .lang-toggle button{border:0; background:transparent; height:28px; padding:0 8px; border-radius:6px; cursor:pointer; font:500 12px/1 var(--sans); color:var(--muted); transition:background-color .15s var(--ease), color .15s var(--ease)}
+    .lang-toggle button:hover{color:var(--ink)}
+    .lang-toggle button.active{background:var(--card); color:var(--ink); box-shadow:0 1px 2px rgba(23,36,59,.08), 0 0 0 1px var(--line)}
+    .menu-btn{display:none; width:36px; height:36px; border:1px solid var(--line-strong); background:transparent; border-radius:8px; color:var(--ink); cursor:pointer; place-items:center}
+    .menu-btn .i-x{display:none}
+    .nav-open .menu-btn .i-menu{display:none}
+    .nav-open .menu-btn .i-x{display:block}
+
+    /* hero */
+    .hero{padding:80px 0 112px}
+    .hero-grid{display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:64px; align-items:center}
+    .hero h1{max-width:11em}
+    .hero-copy{font-size:20px; line-height:1.6; color:var(--text-2); max-width:32em; margin-top:24px}
+    .hero-sub{font-size:16px; color:var(--muted); max-width:36em; margin-top:16px}
+    .hero-actions{display:flex; gap:12px; flex-wrap:wrap; margin-top:40px}
+    .hero-figure{position:relative; margin:0; padding-left:48px}
+    .portrait{border-radius:16px; overflow:hidden; aspect-ratio:4/5; background:var(--raised)}
+    .portrait img{width:100%; height:100%; object-fit:cover}
+    .quote-card{
+      position:absolute; left:0; bottom:-40px; width:min(320px, 72%);
+      background:var(--ink); color:#fff; border-radius:12px; padding:24px;
+      box-shadow:0 16px 40px rgba(23,36,59,.18);
     }
-    .module-top{display:flex; gap:18px; align-items:flex-start}
-    .module-icon{width:46px; height:46px; flex:0 0 46px; border-radius:13px; display:grid; place-items:center; background:var(--paper); font-size:20px}
-    .module h3{font-size:24px; margin-bottom:8px}
-    .module p{color:var(--muted); margin:0}
-    .module ul{padding-left:18px; margin:18px 0 0; color:var(--ink-2)}
-    .module li{margin:6px 0}
-    .outcome{border-top:1px solid var(--line); margin-top:20px; padding-top:16px; font-size:14px}
-    .outcome strong{color:var(--accent)}
+    .quote-card .label{font-size:13px; color:var(--dark-2); margin-bottom:12px}
+    .quote{font-family:var(--serif); font-size:20px; line-height:1.45; color:var(--dark-2)}
+    .quote strong{color:#fff; font-weight:400}
+    .signature{margin-top:20px; padding-top:16px; border-top:1px solid var(--dark-line); font-size:14px; line-height:20px; font-weight:500}
+    .signature span{display:block; font-weight:400; color:var(--dark-2)}
+
+    .reveal{animation:rise .5s var(--ease) both}
+    .reveal-2{animation-delay:.06s}
+    @keyframes rise{from{opacity:0; transform:translateY(8px)} to{opacity:1; transform:none}}
+
+    /* proof bar */
+    .proofbar{border-block:1px solid var(--line); background:var(--card)}
+    .proofgrid{display:grid; grid-template-columns:repeat(3,1fr)}
+    .proofitem{padding:24px 32px; border-left:1px solid var(--line)}
+    .proofitem:first-child{padding-left:0; border-left:0}
+    .proofitem strong{display:block; font:400 24px/32px var(--serif); font-variant-numeric:tabular-nums; margin-bottom:4px}
+    .proofitem span{display:block; font-size:14px; line-height:20px; color:var(--muted); max-width:28em}
+
+    /* sections */
+    .section{padding:96px 0}
+    .tint{background:var(--bg-alt)}
+    .section-head{display:grid; grid-template-columns:200px minmax(0,1fr); gap:48px; margin-bottom:48px}
+    .section-head:last-child{margin-bottom:0}
+    .kicker{font-size:14px; line-height:20px; color:var(--muted); padding-top:16px; border-top:1px solid var(--line-strong); align-self:start}
+    .section-head h2{max-width:18em}
+    .section-head .lead{margin-top:16px}
+
+    /* reality */
+    .reality-grid{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+    .statement{border-radius:12px; padding:32px; background:var(--card); border:1px solid var(--line)}
+    .statement h3{font-size:20px; margin-bottom:12px}
+    .statement p{color:var(--text-2)}
+    .statement.dark{background:var(--ink); border-color:var(--ink); color:#fff}
+    .statement.dark h3{font-family:var(--serif); font-weight:400; font-size:28px; line-height:1.25; margin-bottom:16px}
+    .statement.dark p{color:var(--dark-2); font-size:17px}
+    .statement.dark strong{color:#fff; font-weight:500}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:24px}
+    .chip{font-size:13px; line-height:20px; padding:4px 12px; border-radius:6px; background:var(--bg-alt); border:1px solid var(--line); color:var(--text-2)}
+
+    /* services as rows */
+    .rows{border-top:1px solid var(--line-strong)}
+    .row{display:grid; grid-template-columns:240px minmax(0,1fr) 260px; gap:48px; padding:32px 0; border-bottom:1px solid var(--line)}
+    .row h3{font-family:var(--serif); font-size:24px; line-height:1.3}
+    .row p{color:var(--text-2)}
+    .row .best{font-size:14px; line-height:20px; color:var(--muted)}
+
+    /* modules */
+    .module-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px}
+    .module{border:1px solid var(--line); border-radius:12px; padding:32px; background:var(--card); display:flex; flex-direction:column}
+    .module-top{display:grid; grid-template-columns:40px 1fr; gap:16px; align-items:start}
+    .module-icon{width:40px; height:40px; border-radius:8px; display:grid; place-items:center; background:var(--bg-alt); color:var(--text-2)}
+    .module h3{font-size:20px; margin:8px 0 8px}
+    .module p{color:var(--text-2)}
+    .module ul{list-style:none; padding:0; margin:20px 0 0 56px; color:var(--text-2); font-size:15px}
+    .module li{position:relative; padding-left:16px; margin:4px 0}
+    .module li::before{content:""; position:absolute; left:0; top:11px; width:6px; height:1px; background:var(--muted)}
+    .outcome{margin:auto 0 0 56px; padding-top:20px; font-size:15px; color:var(--text-2)}
+    .outcome-inner{border-top:1px solid var(--line); padding-top:16px}
+    .outcome strong{font-weight:500; color:var(--ink)}
+
+    /* audience */
     .audience{background:var(--ink); color:#fff}
-    .audience .section-head .lead{color:#c4cbd6}
-    .aud-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:12px}
-    .aud{
-      border:1px solid rgba(255,255,255,.14); border-radius:18px; padding:22px; background:rgba(255,255,255,.045)
-    }
-    .aud strong{display:block; margin-bottom:6px}
-    .aud span{color:#b6bfcc; font-size:14px}
-    .format-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:18px}
-    .format{display:grid; grid-template-columns:56px 1fr; gap:18px; border-bottom:1px solid var(--line); padding:22px 0}
-    .format b{width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:var(--paper); font-size:13px}
-    .format h3{font-size:21px; margin-bottom:5px}
-    .format p{margin:0; color:var(--muted); font-size:14px}
-    .result-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:14px}
-    .result{border:1px solid var(--line); border-radius:18px; padding:22px; background:#fff}
-    .result:before{content:"↗"; display:block; color:var(--accent); font-weight:900; margin-bottom:18px}
-    .about{background:var(--paper)}
-    .about-grid{display:grid; grid-template-columns:.8fr 1.2fr; gap:60px; align-items:start}
-.portrait img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  display:block;
-}
-    .portrait .ds{
-      width:140px; height:140px; border-radius:34px; display:grid; place-items:center;
-      background:var(--ink); color:#fff; font-size:42px; font-weight:900; letter-spacing:-.06em
-    }
-    .portrait small{position:absolute; bottom:22px; left:22px; right:22px; text-align:center; color:var(--muted)}
-    .about-copy p{font-size:18px; color:var(--ink-2)}
-    .graybeard{
-      margin-top:26px; padding:24px; border-left:4px solid var(--accent); background:#fff;
-      border-radius:0 16px 16px 0
-    }
-    .graybeard strong{display:block; margin-bottom:6px}
-    .process{counter-reset:step; display:grid; grid-template-columns:repeat(5,1fr); gap:10px}
-    .step{counter-increment:step; border-top:3px solid var(--ink); padding:20px 12px 0 0}
-    .step:before{content:"0" counter(step); color:var(--accent); font-size:12px; font-weight:900; letter-spacing:.1em}
-    .step h3{font-size:18px; margin:10px 0 8px}
-    .step p{font-size:13px; color:var(--muted); margin:0}
-    .social-proof{
-      border:1px dashed #b9b09f; border-radius:var(--radius); padding:34px; text-align:center; background:var(--paper)
-    }
-    .social-proof h3{font-size:28px}
-    .social-proof p{color:var(--muted); margin:10px auto 0; max-width:680px}
-    .faq{max-width:900px; margin:0 auto}
+    .audience h2{color:#fff}
+    .audience .lead{color:var(--dark-2)}
+    .audience .kicker{color:var(--dark-2); border-color:rgba(255,255,255,.2)}
+    .aud-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:40px 32px}
+    .aud{border-top:1px solid var(--dark-line); padding-top:16px}
+    .aud strong{display:block; font-weight:500; margin-bottom:4px}
+    .aud span{color:var(--dark-2); font-size:14px; line-height:22px}
+
+    /* formats */
+    .format-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:0 48px}
+    .format{padding:20px 0; border-bottom:1px solid var(--line)}
+    .format-col{border-top:1px solid var(--line-strong)}
+    .format h3{font-size:17px; margin-bottom:4px}
+    .format p{color:var(--muted); font-size:15px}
+
+    /* results */
+    .result-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:0 48px; border-top:1px solid var(--line-strong)}
+    .result{display:flex; align-items:center; gap:12px; padding:16px 0; border-bottom:1px solid var(--line); font-size:17px}
+    .result .i{color:var(--muted)}
+
+    /* about */
+    .about-body{display:grid; grid-template-columns:200px minmax(0,1fr); gap:48px}
+    .about-copy{max-width:44em}
+    .about-copy h2{margin-bottom:24px}
+    .about-copy p{font-size:17px; line-height:1.7; color:var(--text-2); margin-bottom:16px}
+    .graybeard{margin-top:32px; padding:24px; border-radius:12px; background:var(--card); border:1px solid var(--line)}
+    .graybeard strong{display:block; font-weight:500; margin-bottom:4px}
+    .graybeard span{color:var(--text-2)}
+    .about-copy .hero-actions{margin-top:32px}
+
+    /* why */
+    .cols{display:grid; grid-template-columns:repeat(3,1fr); gap:48px}
+    .col{border-top:1px solid var(--line-strong); padding-top:20px}
+    .col h3{font-size:20px; margin-bottom:8px}
+    .col p{color:var(--text-2)}
+
+    /* process */
+    .process{display:grid; grid-template-columns:repeat(5,1fr); gap:24px; counter-reset:step}
+    .step{counter-increment:step; border-top:2px solid var(--ink); padding-top:20px}
+    .step::before{content:counter(step); display:block; font:400 24px/32px var(--serif); color:var(--accent-ink); font-variant-numeric:tabular-nums; margin-bottom:12px}
+    .step h3{font-size:17px; margin-bottom:8px}
+    .step p{font-size:15px; color:var(--text-2)}
+
+    /* faq */
+    .faq{max-width:800px; border-top:1px solid var(--line-strong)}
     .faq-item{border-bottom:1px solid var(--line)}
     .faq button{
-      width:100%; text-align:left; border:0; background:transparent; padding:22px 0; font:inherit;
-      color:var(--ink); font-weight:800; font-size:18px; display:flex; justify-content:space-between; gap:20px; cursor:pointer
+      width:100%; display:flex; justify-content:space-between; align-items:center; gap:24px;
+      padding:20px 0; border:0; background:transparent; cursor:pointer; text-align:left;
+      font:500 17px/1.4 var(--sans); color:var(--ink);
     }
-    .faq button span:last-child{color:var(--accent)}
-    .faq-answer{display:none; padding:0 40px 22px 0; color:var(--muted)}
-    .faq-item.open .faq-answer{display:block}
-    .cta{padding:70px 0 100px}
-    .cta-box{
-      background:var(--accent); color:#fff; border-radius:34px; padding:54px;
-      display:grid; grid-template-columns:1.3fr .7fr; gap:40px; align-items:end
-    }
-    .cta-box h2{font-size:clamp(38px,5vw,62px)}
-    .cta-box p{font-size:18px; color:#fff1eb; margin:18px 0 0; max-width:740px}
-    .cta-box .btn{background:#fff; color:var(--ink); width:100%}
-    footer{border-top:1px solid var(--line); padding:32px 0 45px; color:var(--muted); font-size:13px}
-    .footer-grid{display:flex; justify-content:space-between; gap:30px; align-items:center}
-    .footer-grid a{font-weight:800; color:var(--ink)}
+    .faq button .i{color:var(--muted); transition:transform .2s var(--ease)}
+    .faq button:hover .i{color:var(--ink)}
+    .faq-item.open button .i{transform:rotate(45deg)}
+    .faq-wrap{display:grid; grid-template-columns:200px minmax(0,1fr); gap:48px}
+
+    /* final cta */
+    .cta{padding:96px 0 128px}
+    .cta-box{display:grid; grid-template-columns:200px minmax(0,1fr); gap:48px}
+    .cta-box h2{font-size:56px; line-height:1.08; letter-spacing:-.02em; max-width:13em}
+    .cta-box p{font-size:18px; color:var(--text-2); max-width:36em; margin-top:24px}
+    .cta-box .hero-actions{margin-top:32px}
+
+    footer{border-top:1px solid var(--line); padding:32px 0 40px; color:var(--muted); font-size:14px}
+    .footer-grid{display:flex; justify-content:space-between; gap:32px; align-items:center}
+    .footer-grid a{display:inline-flex; align-items:center; gap:4px; color:var(--ink); text-decoration:none}
+    .footer-grid a:hover{text-decoration:underline; text-underline-offset:3px}
     .mobile-cta{display:none}
+
+
+    /* ---------- motion layer ---------- */
+    .js .rv{opacity:0; transform:translateY(12px); transition:opacity .6s var(--ease), transform .6s var(--ease); transition-delay:var(--d,0s)}
+    .js .rv.in{opacity:1; transform:none}
+    @keyframes draw{from{background-size:0% .24em} to{background-size:100% .24em}}
+    .hero .mark{animation:draw .9s var(--ease) .45s both}
+    .js .cta .mark{background-size:0% .24em}
+    .js .cta .cta-box.in .mark{animation:draw .9s var(--ease) .35s both}
+    .reveal-3{animation-delay:.18s}
+    .count{font-variant-numeric:tabular-nums}
+
+    /* module hover: the icon tile takes the ink */
+    .module{transition:border-color .2s var(--ease), box-shadow .2s var(--ease)}
+    .module:hover{border-color:var(--line-strong); box-shadow:0 8px 24px rgba(23,36,59,.06)}
+    .module-icon{transition:background-color .2s var(--ease), color .2s var(--ease)}
+    .module:hover .module-icon{background:var(--ink); color:#fff}
+
+    /* process line fills step by step */
+    .process .step{border-top:2px solid var(--line-strong); background:linear-gradient(var(--ink),var(--ink)) no-repeat 0 0 / 0% 2px; background-origin:border-box; background-clip:border-box; transition:background-size .7s var(--ease); transition-delay:var(--d,0s)}
+    .process.in .step, html:not(.js) .process .step{background-size:100% 2px}
+
+    /* faq smooth open */
+    .faq-answer{display:grid; grid-template-rows:0fr; transition:grid-template-rows .3s var(--ease)}
+    .faq-answer > div{overflow:hidden}
+    .faq-answer p{padding:0 48px 24px 0; color:var(--text-2)}
+    .faq-item.open .faq-answer{grid-template-rows:1fr}
+
+    /* ---------- demo: same message, clearer ---------- */
+    .demo{border:1px solid var(--line); border-radius:16px; background:var(--card); padding:32px; box-shadow:0 1px 2px rgba(23,36,59,.04)}
+    .demo-head{display:flex; justify-content:space-between; align-items:flex-start; gap:24px; flex-wrap:wrap; margin-bottom:28px}
+    .demo-title{font:400 24px/32px var(--serif)}
+    .demo-note{font-size:13px; color:var(--muted); margin-top:4px}
+    .demo-tabs{display:flex; gap:2px; padding:2px; border-radius:10px; background:var(--bg-alt); border:1px solid var(--line)}
+    .demo-tabs button{border:0; background:transparent; height:32px; padding:0 12px; border-radius:8px; cursor:pointer; font:500 13px/1 var(--sans); color:var(--muted); transition:background-color .15s var(--ease), color .15s var(--ease)}
+    .demo-tabs button:hover{color:var(--ink)}
+    .demo-tabs button[aria-selected="true"]{background:var(--card); color:var(--ink); box-shadow:0 1px 2px rgba(23,36,59,.08), 0 0 0 1px var(--line)}
+    .demo-body{display:grid; grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr); align-items:stretch}
+    .msg{border-radius:12px; padding:24px; display:flex; flex-direction:column}
+    .msg-before{background:var(--bg-alt)}
+    .msg-after{border:1px solid var(--line-strong); background:var(--card); box-shadow:0 8px 24px rgba(23,36,59,.06)}
+    .msg-meta{display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; font-size:13px; color:var(--muted)}
+    .msg-meta .tag{font-size:12px; padding:2px 8px; border-radius:6px; background:var(--card); border:1px solid var(--line)}
+    .msg-after .tag{background:var(--ink); color:#fff; border-color:var(--ink)}
+    .msg-text{font-size:17px; line-height:1.6}
+    .msg-before .msg-text{color:var(--muted)}
+    .stack{display:grid}
+    .stack > *{grid-area:1/1}
+    .ghost{visibility:hidden}
+    .caret{display:inline-block; width:2px; height:1.1em; margin-left:2px; background:var(--accent); vertical-align:-.15em; animation:blink 1s steps(1) infinite}
+    .caret.done{opacity:0; animation:none}
+    @keyframes blink{50%{opacity:0}}
+    .demo-arrow{display:grid; place-items:center; color:var(--muted)}
+    .demo-notes{list-style:none; margin:20px 0 0; padding:16px 0 0; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; gap:8px 16px; min-height:57px}
+    .demo-notes li{display:flex; align-items:center; gap:6px; font-size:13px; color:var(--text-2); opacity:0; transform:translateY(4px); transition:opacity .3s var(--ease), transform .3s var(--ease); transition-delay:var(--d,0s)}
+    .demo-notes li.in{opacity:1; transform:none}
+    .demo-notes .i{color:var(--accent-ink)}
+    .demo-progress{height:2px; background:var(--line); border-radius:2px; margin-top:24px; overflow:hidden}
+    .demo-progress span{display:block; height:100%; width:100%; background:var(--ink); transform-origin:left; transform:scaleX(0)}
+
+    /* ---------- audience map ---------- */
+    .aud-body{display:grid; grid-template-columns:minmax(0,1.05fr) minmax(0,1fr); gap:64px; align-items:center}
+    .aud-body .aud-grid{grid-template-columns:repeat(2,1fr); gap:32px}
+    .aud-map{width:100%; height:auto; display:block; overflow:visible}
+    .aud-map .link{fill:none; stroke:rgba(255,255,255,.16); stroke-width:1}
+    .aud-map .node rect{fill:#1f2e48; stroke:rgba(255,255,255,.14)}
+    .aud-map .node text{fill:#e8ecf2; font:500 13px var(--sans)}
+    .aud-map .hub rect{fill:#fffdf9}
+    .aud-map .hub text{fill:var(--ink); font:400 16px var(--serif)}
+    .aud-map .ring{fill:none; stroke:rgba(223,111,61,.45); stroke-width:1}
+    .aud-map .dot{fill:var(--accent)}
+    .aud-map .link{stroke-dasharray:2 5}
+    .aud-map .dot.out{fill:#e8ecf2}
+
     @media (max-width:920px){
-      .nav-links>a:not(.nav-cta){display:none}
-      .hero{padding-top:60px}
-      .hero-grid,.section-head,.about-grid,.cta-box{grid-template-columns:1fr}
-      .hero-card{min-height:330px}
-      .cards{grid-template-columns:1fr}
-      .module-grid,.format-grid{grid-template-columns:1fr}
-      .aud-grid,.result-grid{grid-template-columns:repeat(2,1fr)}
-      .process{grid-template-columns:1fr 1fr}
+      .demo{padding:24px}
+      .demo-body{grid-template-columns:1fr; grid-template-rows:auto 40px auto}
+      .demo-arrow svg{transform:rotate(90deg)}
+      .aud-body{grid-template-columns:1fr; gap:48px}
     }
     @media (max-width:600px){
-      .wrap{width:min(calc(100% - 28px), var(--max))}
-      nav{height:68px}
-      .brand .brand-text{display:none}
-      .nav-cta{display:none}
-      .hero{padding:50px 0 48px}
-      h1{font-size:45px}
-      section{padding:72px 0}
-      .reality-grid,.aud-grid,.result-grid,.process{grid-template-columns:1fr}
-      .proofgrid{grid-template-columns:1fr}
-      .proofitem{border-right:0; border-bottom:1px solid var(--line); padding:18px 0}
-      .proofitem:last-child{border-bottom:0}
-      .hero-actions .btn{width:100%}
-      .hero-card{padding:24px}
-      .quote{font-size:24px}
-      .cta-box{padding:34px 24px}
-      .mobile-cta{
-        display:block; position:fixed; left:12px; right:12px; bottom:12px; z-index:60;
+      .demo{padding:20px; border-radius:12px}
+      .demo-tabs{width:100%}
+      .demo-tabs button{flex:1; height:auto; min-height:36px; padding:6px; line-height:1.25; font-size:12px}
+      .msg{padding:20px}
+      .msg-text{font-size:16px}
+      .aud-body .aud-grid{grid-template-columns:1fr}
+    }
+
+    @media (max-width:1080px){
+      .row{grid-template-columns:200px minmax(0,1fr); }
+      .row .best{grid-column:2}
+      .process{grid-template-columns:repeat(3,1fr); row-gap:40px}
+    }
+    @media (max-width:920px){
+      :root{--pad:24px}
+      .menu-btn{display:grid}
+      .nav-links > a:not(.btn){display:none}
+      .nav-open .nav-links{
+        position:absolute; top:64px; left:0; right:0; display:flex; flex-direction:column; align-items:stretch; gap:0;
+        background:var(--bg); border-bottom:1px solid var(--line); padding:8px var(--pad) 16px;
       }
-      .mobile-cta .btn{width:100%; box-shadow:0 12px 30px rgba(23,36,59,.24)}
-      footer{padding-bottom:95px}
+      .nav-open .nav-links > a:not(.btn){display:block; padding:12px 0; border-radius:0; border-bottom:1px solid var(--line)}
+      .nav-open .nav-right{margin:16px 0 0}
+      .hero{padding:48px 0 64px}
+      .hero-grid{grid-template-columns:1fr; gap:48px}
+      .hero-figure{max-width:440px; padding-left:0}
+      .quote-card{position:relative; left:auto; bottom:auto; width:auto; margin:-64px 16px 0}
+      h1{font-size:48px}
+      h2{font-size:32px}
+      .section{padding:80px 0}
+      .section-head,.about-body,.faq-wrap,.cta-box{grid-template-columns:1fr; gap:24px}
+      .kicker{padding-top:12px; justify-self:start; min-width:120px}
+      .reality-grid,.module-grid{grid-template-columns:1fr}
+      .aud-grid{grid-template-columns:repeat(2,1fr)}
+      .cols{grid-template-columns:1fr; gap:32px}
+      .cta-box h2{font-size:40px}
+    }
+    @media (max-width:600px){
+      :root{--pad:20px}
+      .brand-text small{display:none}
+      .nav-right .btn{display:none}
+      h1{font-size:40px}
+      .hero-copy{font-size:18px}
+      .hero-actions .btn{flex:1 1 100%}
+      .proofgrid{grid-template-columns:1fr}
+      .proofitem{padding:20px 0; border-left:0; border-top:1px solid var(--line)}
+      .proofitem:first-child{border-top:0}
+      .section{padding:64px 0}
+      .statement{padding:24px}
+      .row{grid-template-columns:1fr; gap:8px; padding:24px 0}
+      .row .best{grid-column:auto; margin-top:4px}
+      .module{padding:24px}
+      .module ul,.outcome{margin-left:0}
+      .aud-grid,.format-grid,.result-grid{grid-template-columns:1fr}
+      .result-grid{gap:0}
+      .format-col + .format-col{border-top:0}
+      .process{grid-template-columns:1fr}
+      .cta{padding:64px 0 96px}
+      .cta-box h2{font-size:36px}
+      .mobile-cta{display:block; position:fixed; left:12px; right:12px; bottom:12px; z-index:60}
+      .mobile-cta .btn{width:100%; box-shadow:0 8px 24px rgba(23,36,59,.2)}
+      footer{padding-bottom:96px}
+      .footer-grid{flex-direction:column; align-items:flex-start; gap:12px}
+    }
+    @media (prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{animation:none !important; transition:none !important}
     }
   </style>
 </head>
 <body>
-  <header class="nav-shell">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-messages" viewBox="0 0 24 24"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></symbol>
+    <symbol id="i-presentation" viewBox="0 0 24 24"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></symbol>
+    <symbol id="i-handshake" viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></symbol>
+    <symbol id="i-translate" viewBox="0 0 24 24"><path d="M8 3 4 7l4 4"/><path d="M4 7h16"/><path d="m16 21 4-4-4-4"/><path d="M20 17H4"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  </svg>
+
+  <header class="nav-shell" id="navShell">
     <div class="wrap">
       <nav aria-label="Primary navigation">
         <a class="brand" href="#top" aria-label="Dmytro Stephen home">
-          <span class="monogram">DS</span>
+          <span class="monogram" aria-hidden="true">DS</span>
           <span class="brand-text">Dmytro Stephen<small data-i18n="brand.tag">Soft Skills for Pragmatic Professionals</small></span>
         </a>
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
           <a href="#services" data-i18n="nav.services">Services</a>
           <a href="#modules" data-i18n="nav.modules">Training modules</a>
           <a href="#about" data-i18n="nav.about">About</a>
           <a href="#faq" data-i18n="nav.faq">FAQ</a>
-          <div class="lang-toggle" aria-label="Language">
-            <button id="enBtn" class="active" type="button">EN</button>
-            <button id="uaBtn" type="button">UA</button>
+          <div class="nav-right">
+            <div class="lang-toggle" role="group" aria-label="Language">
+              <button id="enBtn" class="active" type="button" aria-pressed="true">EN</button>
+              <button id="uaBtn" type="button" aria-pressed="false">UA</button>
+            </div>
+            <a class="btn btn-primary btn-sm" href="https://www.linkedin.com/in/dmytro-stephen/" target="_blank" rel="noopener"><span data-i18n="cta.message">Message on LinkedIn</span><svg class="i i-sm" aria-hidden="true"><use href="#i-out"/></svg></a>
           </div>
-          <a class="btn btn-primary nav-cta" href="https://www.linkedin.com/in/dmytro-stephen/" target="_blank" rel="noopener" data-i18n="cta.message">Message on LinkedIn ↗</a>
         </div>
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="navLinks">
+          <svg class="i i-menu" aria-hidden="true"><use href="#i-menu"/></svg>
+          <svg class="i i-x" aria-hidden="true"><use href="#i-x"/></svg>
+        </button>
       </nav>
     </div>
   </header>
@@ -288,41 +455,49 @@
   <main id="top">
     <section class="hero">
       <div class="wrap hero-grid">
-        <div>
-          <div class="eyebrow" data-i18n="hero.eyebrow">Dmytro Stephen · Practical soft skills training</div>
-          <h1 data-i18n-html="hero.title">Soft Skills Mastery for <span class="accent">Pragmatic Professionals.</span></h1>
+        <div class="reveal">
+          <h1 data-i18n-html="hero.title">Soft skills mastery for <span class="mark">pragmatic professionals</span></h1>
           <p class="hero-copy" data-i18n="hero.promise">I help technical experts and operational leaders build the communication and leadership skills needed to drive real business results.</p>
           <p class="hero-sub" data-i18n="hero.sub">For professionals and teams working where business, technology, people, and change meet — with practical tools, business context, and no motivational fluff.</p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="https://www.linkedin.com/in/dmytro-stephen/" target="_blank" rel="noopener" data-i18n="cta.message">Message on LinkedIn ↗</a>
-            <a class="btn btn-secondary" href="#services" data-i18n="cta.explore">Explore training options ↓</a>
+            <a class="btn btn-primary" href="https://www.linkedin.com/in/dmytro-stephen/" target="_blank" rel="noopener"><span data-i18n="cta.message">Message on LinkedIn</span><svg class="i i-sm" aria-hidden="true"><use href="#i-out"/></svg></a>
+            <a class="btn btn-secondary" href="#services" data-i18n="cta.explore">Explore training options</a>
           </div>
         </div>
-        <aside class="hero-card" aria-label="Positioning statement">
-          <div class="label" data-i18n="hero.cardLabel">The pragmatic view</div>
-          <div class="quote" data-i18n-html="hero.quote">“Hard skills get you into the room. <strong>Soft skills help the team align, decide, deliver, and earn trust.</strong>”</div>
-          <div class="signature">Dmytro Stephen<span data-i18n="hero.signature">Business · Technology · Human skills</span></div>
-        </aside>
+        <figure class="hero-figure reveal reveal-2">
+          <div class="portrait">
+            <picture>
+              <source srcset="dmytro.webp" type="image/webp" />
+              <img src="dmytro.jpg" width="1040" height="1300" alt="Portrait of Dmytro Stephen" fetchpriority="high" />
+            </picture>
+          </div>
+          <figcaption class="quote-card reveal reveal-3">
+            <div class="label" data-i18n="hero.cardLabel">The pragmatic view</div>
+            <div class="quote" data-i18n-html="hero.quote">“Hard skills get you into the room. <strong>Soft skills help the team align, decide, deliver, and earn trust.</strong>”</div>
+            <div class="signature">Dmytro Stephen<span data-i18n="hero.signature">Business, technology and human skills</span></div>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
     <div class="proofbar">
       <div class="wrap proofgrid">
-        <div class="proofitem"><strong>12+ years</strong><span data-i18n="proof.years">connecting technology with real business needs</span></div>
+        <div class="proofitem"><strong><span class="count" data-to="12">12</span>+ <span data-i18n="proof.yearsUnit">years</span></strong><span data-i18n="proof.years">connecting technology with real business needs</span></div>
         <div class="proofitem"><strong data-i18n="proof.bridgeTitle">Business × Technology</strong><span data-i18n="proof.bridge">experience across business development, partnerships, consulting, AI and digital transformation</span></div>
         <div class="proofitem"><strong data-i18n="proof.modeTitle">Practical by design</strong><span data-i18n="proof.mode">training built around conversations, decisions, stakeholders and situations people actually face</span></div>
       </div>
     </div>
 
-    <section class="reality" id="reality">
+    <section class="section tint" id="reality">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="kicker" data-i18n="reality.kicker">The reality check</div><h2 data-i18n="reality.title">Great plans still depend on people.</h2></div>
-          <p class="lead" data-i18n="reality.lead">Technology can be excellent and strategy can be sound — but execution slows down when communication is unclear, ownership is fuzzy, feedback is avoided, or business and technical teams stop understanding each other.</p>
+          <div class="kicker" data-i18n="reality.kicker">The reality check</div>
+          <div><h2 data-i18n="reality.title">Great plans still depend on people</h2>
+          <p class="lead" data-i18n="reality.lead">Technology can be excellent and strategy can be sound — but execution slows down when communication is unclear, ownership is fuzzy, feedback is avoided, or business and technical teams stop understanding each other.</p></div>
         </div>
         <div class="reality-grid">
-          <article class="statement big">
-            <h3 data-i18n="reality.bigTitle">The human layer is operational infrastructure.</h3>
+          <article class="statement dark">
+            <h3 data-i18n="reality.bigTitle">The human layer is operational infrastructure</h3>
             <p data-i18n-html="reality.bigText">Clear communication, useful feedback, confident presentations, thoughtful negotiation, and healthy conflict are not “nice to have.” They shape <strong>how work moves.</strong></p>
           </article>
           <article class="statement">
@@ -340,97 +515,132 @@
       </div>
     </section>
 
-    <section id="now">
+    <section class="section" id="now">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="kicker" data-i18n="now.kicker">Why now</div><h2 data-i18n="now.title">AI raises the value of distinctly human work.</h2></div>
-          <p class="lead" data-i18n="now.lead">As automation handles more routine output, professionals still need to frame problems, ask better questions, explain trade-offs, influence without noise, handle disagreement, and make sound decisions with others. Technical capability matters. Human capability helps turn it into business value.</p>
+          <div class="kicker" data-i18n="now.kicker">Why now</div>
+          <div><h2 data-i18n="now.title">AI raises the value of distinctly human work</h2>
+          <p class="lead" data-i18n="now.lead">As automation handles more routine output, professionals still need to frame problems, ask better questions, explain trade-offs, influence without noise, handle disagreement, and make sound decisions with others. Technical capability matters. Human capability helps turn it into business value.</p></div>
+        </div>
+        <div class="demo" id="demo">
+          <div class="demo-head">
+            <div>
+              <div class="demo-title" data-i18n="demo.title">Same message, clearer</div>
+              <div class="demo-note" data-i18n="demo.note">Illustrative examples of what clearer workplace communication sounds like</div>
+            </div>
+            <div class="demo-tabs" role="tablist" aria-label="Examples">
+              <button type="button" role="tab" aria-selected="true" data-scene="0" data-i18n="demo.t1">Tech to business</button>
+              <button type="button" role="tab" aria-selected="false" data-scene="1" data-i18n="demo.t2">Feedback</button>
+              <button type="button" role="tab" aria-selected="false" data-scene="2" data-i18n="demo.t3">Meeting wrap-up</button>
+            </div>
+          </div>
+          <div class="demo-body" aria-live="polite">
+            <div class="msg msg-before">
+              <div class="msg-meta"><span id="demoWho">Developer to client</span><span class="tag" data-i18n="demo.before">Before</span></div>
+              <p class="msg-text" id="demoBefore">We need to refactor the auth module before integrating SSO, otherwise tech debt grows and the regression surface gets bigger.</p>
+            </div>
+            <div class="demo-arrow" aria-hidden="true"><svg class="i"><use href="#i-arrow"/></svg></div>
+            <div class="msg msg-after">
+              <div class="msg-meta"><span id="demoWho2">Developer to client</span><span class="tag" data-i18n="demo.after">After</span></div>
+              <p class="msg-text stack"><span class="ghost" id="demoGhost" aria-hidden="true"></span><span><span id="demoAfter"></span><span class="caret" aria-hidden="true"></span></span></p>
+              <ul class="demo-notes" id="demoNotes"></ul>
+            </div>
+          </div>
+          <div class="demo-progress" aria-hidden="true"><span id="demoBar"></span></div>
         </div>
       </div>
     </section>
 
-    <section id="services" class="reality">
+    <section class="section tint" id="services">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="kicker" data-i18n="services.kicker">What I offer</div><h2 data-i18n="services.title">Clear formats. Useful work.</h2></div>
-          <p class="lead" data-i18n="services.lead">Choose the level that fits the problem: individual development, a focused team intervention, or help aligning business and technical stakeholders.</p>
+          <div class="kicker" data-i18n="services.kicker">What I offer</div>
+          <div><h2 data-i18n="services.title">Clear formats, useful work</h2>
+          <p class="lead" data-i18n="services.lead">Choose the level that fits the problem: individual development, a focused team intervention, or help aligning business and technical stakeholders.</p></div>
         </div>
-        <div class="cards">
-          <article class="card">
-            <div class="num">01</div>
-            <h3 data-i18n="services.one.title">1-on-1 Mentorship</h3>
+        <div class="rows">
+          <article class="row">
+            <h3 data-i18n="services.one.title">1-on-1 mentorship</h3>
             <p data-i18n="services.one.text">Tailored work for professionals stepping into leadership, higher-stakes communication, or more visible business responsibility.</p>
-            <div class="mini" data-i18n="services.one.best">Best for: individual growth + real situations</div>
+            <p class="best" data-i18n="services.one.best">Best for individual growth and real situations</p>
           </article>
-          <article class="card">
-            <div class="num">02</div>
-            <h3 data-i18n="services.two.title">Team Workshops</h3>
+          <article class="row">
+            <h3 data-i18n="services.two.title">Team workshops</h3>
             <p data-i18n="services.two.text">Tactical sessions on cross-functional communication, conflict resolution, stakeholder management, feedback, presentations, negotiation, and collaboration.</p>
-            <div class="mini" data-i18n="services.two.best">Best for: shared habits + team alignment</div>
+            <p class="best" data-i18n="services.two.best">Best for shared habits and team alignment</p>
           </article>
-          <article class="card">
-            <div class="num">03</div>
-            <h3 data-i18n="services.three.title">Strategic Consulting</h3>
+          <article class="row">
+            <h3 data-i18n="services.three.title">Strategic consulting</h3>
             <p data-i18n="services.three.text">Practical support for technical and business teams that need to speak the same language, clarify expectations, and improve how important conversations happen.</p>
-            <div class="mini" data-i18n="services.three.best">Best for: recurring cross-functional friction</div>
+            <p class="best" data-i18n="services.three.best">Best for recurring cross-functional friction</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="modules">
+    <section class="section" id="modules">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="kicker" data-i18n="modules.kicker">Training modules</div><h2 data-i18n="modules.title">Skills attached to real work.</h2></div>
-          <p class="lead" data-i18n="modules.lead">Modules can stand alone or be combined into a custom program around the conversations, roles, and business situations your team faces.</p>
+          <div class="kicker" data-i18n="modules.kicker">Training modules</div>
+          <div><h2 data-i18n="modules.title">Skills attached to real work</h2>
+          <p class="lead" data-i18n="modules.lead">Modules can stand alone or be combined into a custom program around the conversations, roles, and business situations your team faces.</p></div>
         </div>
 
         <div class="module-grid">
           <article class="module">
-            <div class="module-top"><div class="module-icon">↔</div><div><h3 data-i18n="m1.title">Business Communication</h3><p data-i18n="m1.desc">Make ideas easier to understand, decisions easier to make, and collaboration easier to sustain.</p></div></div>
+            <div class="module-top"><div class="module-icon"><svg class="i" aria-hidden="true"><use href="#i-messages"/></svg></div><div><h3 data-i18n="m1.title">Business communication</h3><p data-i18n="m1.desc">Make ideas easier to understand, decisions easier to make, and collaboration easier to sustain.</p></div></div>
             <ul><li data-i18n="m1.a">Clear and structured thinking</li><li data-i18n="m1.b">Active listening</li><li data-i18n="m1.c">Business writing</li><li data-i18n="m1.d">Communication between technical and non-technical teams</li></ul>
-            <div class="outcome"><strong data-i18n="label.outcome">Outcome:</strong> <span data-i18n="m1.outcome">less ambiguity and more useful conversations.</span></div>
+            <div class="outcome"><div class="outcome-inner"><strong data-i18n="label.outcome">Outcome:</strong> <span data-i18n="m1.outcome">less ambiguity and more useful conversations.</span></div></div>
           </article>
 
           <article class="module">
-            <div class="module-top"><div class="module-icon">◎</div><div><h3 data-i18n="m2.title">Leadership, Feedback & Conflict</h3><p data-i18n="m2.desc">Lead conversations that clarify responsibility, surface issues early, and help teams move forward.</p></div></div>
+            <div class="module-top"><div class="module-icon"><svg class="i" aria-hidden="true"><use href="#i-users"/></svg></div><div><h3 data-i18n="m2.title">Leadership, feedback and conflict</h3><p data-i18n="m2.desc">Lead conversations that clarify responsibility, surface issues early, and help teams move forward.</p></div></div>
             <ul><li data-i18n="m2.a">Leadership communication</li><li data-i18n="m2.b">Feedback culture</li><li data-i18n="m2.c">Conflict resolution</li><li data-i18n="m2.d">Delegation and decision-making</li></ul>
-            <div class="outcome"><strong data-i18n="label.outcome">Outcome:</strong> <span data-i18n="m2.outcome">stronger management conversations and healthier accountability.</span></div>
+            <div class="outcome"><div class="outcome-inner"><strong data-i18n="label.outcome">Outcome:</strong> <span data-i18n="m2.outcome">stronger management conversations and healthier accountability.</span></div></div>
           </article>
 
           <article class="module">
-            <div class="module-top"><div class="module-icon">▰</div><div><h3 data-i18n="m3.title">Presentation & Public Speaking</h3><p data-i18n="m3.desc">Present ideas with structure, relevance, confidence, and respect for the audience’s time.</p></div></div>
+            <div class="module-top"><div class="module-icon"><svg class="i" aria-hidden="true"><use href="#i-presentation"/></svg></div><div><h3 data-i18n="m3.title">Presentation and public speaking</h3><p data-i18n="m3.desc">Present ideas with structure, relevance, confidence, and respect for the audience’s time.</p></div></div>
             <ul><li data-i18n="m3.a">Presentation structure</li><li data-i18n="m3.b">Executive-level clarity</li><li data-i18n="m3.c">Public speaking</li><li data-i18n="m3.d">Handling questions and objections</li></ul>
-            <div class="outcome"><strong data-i18n="label.outcome">Outcome:</strong> <span data-i18n="m3.outcome">more confident, concise, decision-friendly presentations.</span></div>
+            <div class="outcome"><div class="outcome-inner"><strong data-i18n="label.outcome">Outcome:</strong> <span data-i18n="m3.outcome">more confident, concise, decision-friendly presentations.</span></div></div>
           </article>
 
           <article class="module">
-            <div class="module-top"><div class="module-icon">◇</div><div><h3 data-i18n="m4.title">Negotiation & Client Communication</h3><p data-i18n="m4.desc">Improve how value, expectations, trade-offs, and difficult topics are discussed with clients and stakeholders.</p></div></div>
+            <div class="module-top"><div class="module-icon"><svg class="i" aria-hidden="true"><use href="#i-handshake"/></svg></div><div><h3 data-i18n="m4.title">Negotiation and client communication</h3><p data-i18n="m4.desc">Improve how value, expectations, trade-offs, and difficult topics are discussed with clients and stakeholders.</p></div></div>
             <ul><li data-i18n="m4.a">Negotiation skills</li><li data-i18n="m4.b">Client communication</li><li data-i18n="m4.c">Stakeholder management</li><li data-i18n="m4.d">Relationship building</li></ul>
-            <div class="outcome"><strong data-i18n="label.outcome">Outcome:</strong> <span data-i18n="m4.outcome">clearer expectations and more productive commercial conversations.</span></div>
+            <div class="outcome"><div class="outcome-inner"><strong data-i18n="label.outcome">Outcome:</strong> <span data-i18n="m4.outcome">clearer expectations and more productive commercial conversations.</span></div></div>
           </article>
 
           <article class="module">
-            <div class="module-top"><div class="module-icon">⌘</div><div><h3 data-i18n="m5.title">Business × Tech Collaboration</h3><p data-i18n="m5.desc">Help developers, QA, PMs, managers, clients, and business stakeholders work with fewer translation gaps.</p></div></div>
+            <div class="module-top"><div class="module-icon"><svg class="i" aria-hidden="true"><use href="#i-translate"/></svg></div><div><h3 data-i18n="m5.title">Business × tech collaboration</h3><p data-i18n="m5.desc">Help developers, QA, PMs, managers, clients, and business stakeholders work with fewer translation gaps.</p></div></div>
             <ul><li data-i18n="m5.a">Cross-functional collaboration</li><li data-i18n="m5.b">Technical-to-business communication</li><li data-i18n="m5.c">Critical thinking</li><li data-i18n="m5.d">Decision framing</li></ul>
-            <div class="outcome"><strong data-i18n="label.outcome">Outcome:</strong> <span data-i18n="m5.outcome">better alignment around priorities, constraints, and decisions.</span></div>
+            <div class="outcome"><div class="outcome-inner"><strong data-i18n="label.outcome">Outcome:</strong> <span data-i18n="m5.outcome">better alignment around priorities, constraints, and decisions.</span></div></div>
           </article>
 
           <article class="module">
-            <div class="module-top"><div class="module-icon">AI</div><div><h3 data-i18n="m6.title">Human Skills in the AI Era</h3><p data-i18n="m6.desc">Build the judgment and communication habits that help people use AI productively without outsourcing their thinking.</p></div></div>
+            <div class="module-top"><div class="module-icon"><svg class="i" aria-hidden="true"><use href="#i-compass"/></svg></div><div><h3 data-i18n="m6.title">Human skills in the AI era</h3><p data-i18n="m6.desc">Build the judgment and communication habits that help people use AI productively without outsourcing their thinking.</p></div></div>
             <ul><li data-i18n="m6.a">Adaptability</li><li data-i18n="m6.b">Human-AI collaboration</li><li data-i18n="m6.c">Critical thinking and judgment</li><li data-i18n="m6.d">Personal branding on LinkedIn</li></ul>
-            <div class="outcome"><strong data-i18n="label.outcome">Outcome:</strong> <span data-i18n="m6.outcome">more thoughtful use of AI and stronger human contribution around it.</span></div>
+            <div class="outcome"><div class="outcome-inner"><strong data-i18n="label.outcome">Outcome:</strong> <span data-i18n="m6.outcome">more thoughtful use of AI and stronger human contribution around it.</span></div></div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="audience" id="audience">
+    <section class="section audience" id="audience">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="kicker" data-i18n="aud.kicker">Who this is for</div><h2 data-i18n="aud.title">People whose work depends on other people.</h2></div>
-          <p class="lead" data-i18n="aud.lead">Especially useful in environments where expertise must travel across roles, departments, clients, and levels of seniority.</p>
+          <div class="kicker" data-i18n="aud.kicker">Who this is for</div>
+          <div><h2 data-i18n="aud.title">People whose work depends on other people</h2>
+          <p class="lead" data-i18n="aud.lead">Especially useful in environments where expertise must travel across roles, departments, clients, and levels of seniority.</p></div>
         </div>
+        <div class="aud-body">
+          <svg class="aud-map rv" id="audMap" viewBox="0 0 560 420" role="img" aria-label="Roles connected through shared conversations">
+            <path id="lk0" class="link" d="M280.0 50.0 Q252.0 130.0 280.0 210.0"/><path id="lk1" class="link" d="M444.2 110.2 Q376.6 184.1 280.0 210.0"/><path id="lk2" class="link" d="M484.7 245.6 Q387.2 200.2 280.0 210.0"/><path id="lk3" class="link" d="M371.1 354.2 Q301.9 297.0 280.0 210.0"/><path id="lk4" class="link" d="M188.9 354.2 Q258.1 297.0 280.0 210.0"/><path id="lk5" class="link" d="M75.3 245.6 Q172.8 200.2 280.0 210.0"/><path id="lk6" class="link" d="M115.8 110.2 Q183.4 184.1 280.0 210.0"/>
+            <circle class="ring" cx="280.0" cy="210.0" r="64"><animate attributeName="r" values="56;84" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".9;0" dur="3s" repeatCount="indefinite"/></circle>
+            <circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="3.40s" begin="-0.00s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk0"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="3.40s" begin="-1.70s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk0"/></animateMotion></circle><circle class="dot out" r="2.5" cx="-20" cy="-20"><animateMotion dur="4.50s" begin="-0.00s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk0"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="3.93s" begin="-0.71s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk1"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="3.93s" begin="-2.67s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk1"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="4.46s" begin="-1.42s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk2"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="4.46s" begin="-3.65s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk2"/></animateMotion></circle><circle class="dot out" r="2.5" cx="-20" cy="-20"><animateMotion dur="5.56s" begin="-2.60s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk2"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="4.99s" begin="-2.13s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk3"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="4.99s" begin="-4.62s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk3"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="3.72s" begin="-2.84s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk4"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="3.72s" begin="-4.70s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk4"/></animateMotion></circle><circle class="dot out" r="2.5" cx="-20" cy="-20"><animateMotion dur="4.82s" begin="-0.38s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk4"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="4.25s" begin="-3.55s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk5"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="4.25s" begin="-5.67s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk5"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="4.78s" begin="-4.26s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk6"/></animateMotion></circle><circle class="dot" r="3.5" cx="-20" cy="-20"><animateMotion dur="4.78s" begin="-6.65s" repeatCount="indefinite" keyPoints="0;1" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk6"/></animateMotion></circle><circle class="dot out" r="2.5" cx="-20" cy="-20"><animateMotion dur="5.88s" begin="-1.92s" repeatCount="indefinite" keyPoints="1;0" keyTimes="0;1" calcMode="spline" keySplines=".45 0 .55 1"><mpath href="#lk6"/></animateMotion></circle>
+            <g class="node"><rect x="230.0" y="34.0" width="100" height="32" rx="8"/><text x="280.0" y="54.5" text-anchor="middle" data-i18n="map.dev">Developers</text></g><g class="node"><rect x="394.2" y="94.2" width="100" height="32" rx="8"/><text x="444.2" y="114.7" text-anchor="middle" data-i18n="map.qa">QA</text></g><g class="node"><rect x="434.7" y="229.6" width="100" height="32" rx="8"/><text x="484.7" y="250.1" text-anchor="middle" data-i18n="map.pm">Product</text></g><g class="node"><rect x="321.1" y="338.2" width="100" height="32" rx="8"/><text x="371.1" y="358.7" text-anchor="middle" data-i18n="map.client">Clients</text></g><g class="node"><rect x="138.9" y="338.2" width="100" height="32" rx="8"/><text x="188.9" y="358.7" text-anchor="middle" data-i18n="map.sales">Sales</text></g><g class="node"><rect x="25.3" y="229.6" width="100" height="32" rx="8"/><text x="75.3" y="250.1" text-anchor="middle" data-i18n="map.mgr">Managers</text></g><g class="node"><rect x="65.8" y="94.2" width="100" height="32" rx="8"/><text x="115.8" y="114.7" text-anchor="middle" data-i18n="map.hr">HR</text></g>
+            <g class="node hub"><rect x="204.0" y="188.0" width="152" height="44" rx="10"/><text x="280.0" y="215.5" text-anchor="middle" data-i18n="map.hub">Shared decision</text></g>
+          </svg>
         <div class="aud-grid">
           <div class="aud"><strong data-i18n="aud.1t">Managers & team leads</strong><span data-i18n="aud.1x">Leadership, feedback, delegation, conflict, decisions.</span></div>
           <div class="aud"><strong data-i18n="aud.2t">HR & people teams</strong><span data-i18n="aud.2x">Practical development programs for employees and managers.</span></div>
@@ -441,58 +651,58 @@
           <div class="aud"><strong data-i18n="aud.7t">Future leaders</strong><span data-i18n="aud.7x">Confidence and communication for broader responsibility.</span></div>
           <div class="aud"><strong data-i18n="aud.8t">Individual professionals</strong><span data-i18n="aud.8x">Communication, public speaking, leadership, and career visibility.</span></div>
         </div>
+        </div>
       </div>
     </section>
 
-    <section id="formats">
+    <section class="section" id="formats">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="kicker" data-i18n="formats.kicker">Training formats</div><h2 data-i18n="formats.title">Use the format that fits the need.</h2></div>
-          <p class="lead" data-i18n="formats.lead">The format should serve the business problem — not the other way around.</p>
+          <div class="kicker" data-i18n="formats.kicker">Training formats</div>
+          <div><h2 data-i18n="formats.title">Use the format that fits the need</h2>
+          <p class="lead" data-i18n="formats.lead">The format should serve the business problem — not the other way around.</p></div>
         </div>
         <div class="format-grid">
-          <div>
-            <div class="format"><b>01</b><div><h3 data-i18n="f1.t">Corporate workshops</h3><p data-i18n="f1.x">Best for focused skill development around a shared team challenge.</p></div></div>
-            <div class="format"><b>02</b><div><h3 data-i18n="f2.t">Team training sessions</h3><p data-i18n="f2.x">Best when a team needs shared language, habits, and practice.</p></div></div>
-            <div class="format"><b>03</b><div><h3 data-i18n="f3.t">1-on-1 mentoring</h3><p data-i18n="f3.x">Best for leadership transitions, sensitive situations, or individual development.</p></div></div>
-            <div class="format"><b>04</b><div><h3 data-i18n="f4.t">Short practical sessions</h3><p data-i18n="f4.x">Best for one concrete skill or recurring problem that needs fast application.</p></div></div>
+          <div class="format-col">
+            <div class="format"><h3 data-i18n="f1.t">Corporate workshops</h3><p data-i18n="f1.x">Best for focused skill development around a shared team challenge.</p></div>
+            <div class="format"><h3 data-i18n="f2.t">Team training sessions</h3><p data-i18n="f2.x">Best when a team needs shared language, habits, and practice.</p></div>
+            <div class="format"><h3 data-i18n="f3.t">1-on-1 mentoring</h3><p data-i18n="f3.x">Best for leadership transitions, sensitive situations, or individual development.</p></div>
+            <div class="format"><h3 data-i18n="f4.t">Short practical sessions</h3><p data-i18n="f4.x">Best for one concrete skill or recurring problem that needs fast application.</p></div>
           </div>
-          <div>
-            <div class="format"><b>05</b><div><h3 data-i18n="f5.t">Online training</h3><p data-i18n="f5.x">Best for distributed teams and flexible participation.</p></div></div>
-            <div class="format"><b>06</b><div><h3 data-i18n="f6.t">Offline training</h3><p data-i18n="f6.x">Best for immersive practice, live discussion, and team interaction.</p></div></div>
-            <div class="format"><b>07</b><div><h3 data-i18n="f7.t">Custom company program</h3><p data-i18n="f7.x">Best when several skills need to be built around specific roles or workflows.</p></div></div>
-            <div class="format"><b>08</b><div><h3 data-i18n="f8.t">LinkedIn / personal branding workshop</h3><p data-i18n="f8.x">Best for professionals who need clearer positioning and stronger professional visibility.</p></div></div>
+          <div class="format-col">
+            <div class="format"><h3 data-i18n="f5.t">Online training</h3><p data-i18n="f5.x">Best for distributed teams and flexible participation.</p></div>
+            <div class="format"><h3 data-i18n="f6.t">Offline training</h3><p data-i18n="f6.x">Best for immersive practice, live discussion, and team interaction.</p></div>
+            <div class="format"><h3 data-i18n="f7.t">Custom company program</h3><p data-i18n="f7.x">Best when several skills need to be built around specific roles or workflows.</p></div>
+            <div class="format"><h3 data-i18n="f8.t">LinkedIn and personal branding workshop</h3><p data-i18n="f8.x">Best for professionals who need clearer positioning and stronger professional visibility.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="reality" id="results">
+    <section class="section tint" id="results">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="kicker" data-i18n="results.kicker">Expected results</div><h2 data-i18n="results.title">Practical improvements you can notice at work.</h2></div>
-          <p class="lead" data-i18n="results.lead">The aim is not personality transformation. It is better professional behavior in situations that affect teams, clients, and delivery.</p>
+          <div class="kicker" data-i18n="results.kicker">Expected results</div>
+          <div><h2 data-i18n="results.title">Practical improvements you can notice at work</h2>
+          <p class="lead" data-i18n="results.lead">The aim is not personality transformation. It is better professional behavior in situations that affect teams, clients, and delivery.</p></div>
         </div>
         <div class="result-grid">
-          <div class="result" data-i18n="r1">Clearer communication</div>
-          <div class="result" data-i18n="r2">Better team alignment</div>
-          <div class="result" data-i18n="r3">Improved client conversations</div>
-          <div class="result" data-i18n="r4">More confident presentations</div>
-          <div class="result" data-i18n="r5">Better conflict handling</div>
-          <div class="result" data-i18n="r6">Stronger leadership communication</div>
-          <div class="result" data-i18n="r7">Smoother cross-functional collaboration</div>
-          <div class="result" data-i18n="r8">More thoughtful adaptation to AI-enabled work</div>
+          <div class="result"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="r1">Clearer communication</span></div>
+          <div class="result"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="r2">Better team alignment</span></div>
+          <div class="result"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="r3">Improved client conversations</span></div>
+          <div class="result"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="r4">More confident presentations</span></div>
+          <div class="result"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="r5">Better conflict handling</span></div>
+          <div class="result"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="r6">Stronger leadership communication</span></div>
+          <div class="result"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="r7">Smoother cross-functional collaboration</span></div>
+          <div class="result"><svg class="i" aria-hidden="true"><use href="#i-check"/></svg><span data-i18n="r8">More thoughtful adaptation to AI-enabled work</span></div>
         </div>
       </div>
     </section>
 
-    <section class="about" id="about">
-      <div class="wrap about-grid">
-   <div class="portrait">
-  <img src="dmytro.jpg" alt="Dmytro Stephen">
-</div>
+    <section class="section" id="about">
+      <div class="wrap about-body">
+        <div class="kicker" data-i18n="about.kicker">About the trainer</div>
         <div class="about-copy">
-          <div class="kicker" data-i18n="about.kicker">About the trainer</div>
           <h2>Dmytro Stephen</h2>
           <p data-i18n="about.p1">Dmytro brings 12+ years of experience helping companies connect technology with real business needs. His background spans business development, partnerships, technology consulting, AI, digital transformation, and practical business solutions.</p>
           <p data-i18n="about.p2">His perspective comes from hands-on work across retail, defense, utility, and AI partnerships, including experience connected with Miatech and LaSoft Software Development. The training is built from real operational contexts rather than abstract management theory.</p>
@@ -502,58 +712,63 @@
             <span data-i18n="about.grayText">Pattern recognition earned through years of real conversations, changing markets, difficult trade-offs, clients, teams, and technology shifts — applied without corporate theater.</span>
           </div>
           <div class="hero-actions">
-            <a class="btn btn-secondary" href="https://www.linkedin.com/in/dmytro-stephen/" target="_blank" rel="noopener" data-i18n="about.linkedin">View LinkedIn profile ↗</a>
+            <a class="btn btn-secondary" href="https://www.linkedin.com/in/dmytro-stephen/" target="_blank" rel="noopener"><span data-i18n="about.linkedin">View LinkedIn profile</span><svg class="i i-sm" aria-hidden="true"><use href="#i-out"/></svg></a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="why">
+    <section class="section tint" id="why">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="kicker" data-i18n="why.kicker">Why work with me</div><h2 data-i18n="why.title">Business context first.</h2></div>
-          <p class="lead" data-i18n="why.lead">This is soft-skills training designed for people who have deadlines, stakeholders, clients, systems, constraints, and measurable work to get done.</p>
+          <div class="kicker" data-i18n="why.kicker">Why work with me</div>
+          <div><h2 data-i18n="why.title">Business context first</h2>
+          <p class="lead" data-i18n="why.lead">This is soft-skills training designed for people who have deadlines, stakeholders, clients, systems, constraints, and measurable work to get done.</p></div>
         </div>
-        <div class="cards">
-          <article class="card"><div class="num">01</div><h3 data-i18n="why.1t">Business experience</h3><p data-i18n="why.1x">Training is anchored in how companies communicate, sell, deliver, partner, and make decisions.</p></article>
-          <article class="card"><div class="num">02</div><h3 data-i18n="why.2t">Technology fluency</h3><p data-i18n="why.2x">Useful for environments where technical detail and business context need to meet without losing meaning.</p></article>
-          <article class="card"><div class="num">03</div><h3 data-i18n="why.3t">Practical over theoretical</h3><p data-i18n="why.3x">Exercises, examples, and discussion are designed around situations participants actually face.</p></article>
+        <div class="cols">
+          <article class="col"><h3 data-i18n="why.1t">Business experience</h3><p data-i18n="why.1x">Training is anchored in how companies communicate, sell, deliver, partner, and make decisions.</p></article>
+          <article class="col"><h3 data-i18n="why.2t">Technology fluency</h3><p data-i18n="why.2x">Useful for environments where technical detail and business context need to meet without losing meaning.</p></article>
+          <article class="col"><h3 data-i18n="why.3t">Practical over theoretical</h3><p data-i18n="why.3x">Exercises, examples, and discussion are designed around situations participants actually face.</p></article>
         </div>
       </div>
     </section>
 
-    <section class="reality" id="process">
+    <section class="section" id="process">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="kicker" data-i18n="process.kicker">How it works</div><h2 data-i18n="process.title">Simple from first conversation to follow-through.</h2></div>
-          <p class="lead" data-i18n="process.lead">No oversized training architecture before we understand the problem.</p>
+          <div class="kicker" data-i18n="process.kicker">How it works</div>
+          <div><h2 data-i18n="process.title">Simple from first conversation to follow-through</h2>
+          <p class="lead" data-i18n="process.lead">No oversized training architecture before we understand the problem.</p></div>
         </div>
-        <div class="process">
-          <div class="step"><h3 data-i18n="p1.t">Discovery call</h3><p data-i18n="p1.x">A short conversation about the team, context, and desired improvement.</p></div>
-          <div class="step"><h3 data-i18n="p2.t">Identify needs</h3><p data-i18n="p2.x">Pinpoint the communication, leadership, or collaboration problems worth solving.</p></div>
-          <div class="step"><h3 data-i18n="p3.t">Customize the plan</h3><p data-i18n="p3.x">Select modules, examples, format, and level of practice.</p></div>
-          <div class="step"><h3 data-i18n="p4.t">Deliver practical sessions</h3><p data-i18n="p4.x">Work through frameworks, exercises, discussion, and application.</p></div>
-          <div class="step"><h3 data-i18n="p5.t">Follow-up</h3><p data-i18n="p5.x">Provide exercises and recommendations to help the learning stick.</p></div>
-        </div>
+        <ol class="process" style="list-style:none; padding:0; margin:0">
+          <li class="step"><h3 data-i18n="p1.t">Discovery call</h3><p data-i18n="p1.x">A short conversation about the team, context, and desired improvement.</p></li>
+          <li class="step"><h3 data-i18n="p2.t">Identify needs</h3><p data-i18n="p2.x">Pinpoint the communication, leadership, or collaboration problems worth solving.</p></li>
+          <li class="step"><h3 data-i18n="p3.t">Customize the plan</h3><p data-i18n="p3.x">Select modules, examples, format, and level of practice.</p></li>
+          <li class="step"><h3 data-i18n="p4.t">Deliver practical sessions</h3><p data-i18n="p4.x">Work through frameworks, exercises, discussion, and application.</p></li>
+          <li class="step"><h3 data-i18n="p5.t">Follow-up</h3><p data-i18n="p5.x">Provide exercises and recommendations to help the learning stick.</p></li>
+        </ol>
       </div>
     </section>
 
-
-    <section id="faq">
+    <section class="section tint" id="faq">
       <div class="wrap">
         <div class="section-head">
-          <div><div class="kicker">FAQ</div><h2 data-i18n="faq.title">Useful questions before we talk.</h2></div>
-          <p class="lead" data-i18n="faq.lead">The program can be shaped around the people, situation, and business objective rather than forced into a fixed template.</p>
+          <div class="kicker" data-i18n="nav.faq">FAQ</div>
+          <div><h2 data-i18n="faq.title">Useful questions before we talk</h2>
+          <p class="lead" data-i18n="faq.lead">The program can be shaped around the people, situation, and business objective rather than forced into a fixed template.</p></div>
         </div>
-        <div class="faq">
-          <div class="faq-item open"><button type="button"><span data-i18n="q1">Is the training available online?</span><span>+</span></button><div class="faq-answer" data-i18n="a1">Yes. Online and offline formats are both possible; the right option depends on the team and session goals.</div></div>
-          <div class="faq-item"><button type="button"><span data-i18n="q2">Can the program be customized for our team?</span><span>+</span></button><div class="faq-answer" data-i18n="a2">Yes. The process starts by identifying the real communication, leadership, or collaboration needs, then selecting relevant modules and exercises.</div></div>
-          <div class="faq-item"><button type="button"><span data-i18n="q3">Is this suitable for IT teams?</span><span>+</span></button><div class="faq-answer" data-i18n="a3">Yes. A core focus is communication between technical and non-technical people, including developers, QA, PMs, clients, and business stakeholders.</div></div>
-          <div class="faq-item"><button type="button"><span data-i18n="q4">How long does a training session last?</span><span>+</span></button><div class="faq-answer" data-i18n="a4">Session length is agreed based on the topic, audience, and level of practice needed. Short focused sessions and broader workshop formats are both available.</div></div>
-          <div class="faq-item"><button type="button"><span data-i18n="q5">Can you train managers and team leads?</span><span>+</span></button><div class="faq-answer" data-i18n="a5">Yes. Relevant topics include leadership communication, feedback, conflict resolution, delegation, stakeholder management, and decision-making.</div></div>
-          <div class="faq-item"><button type="button"><span data-i18n="q6">Is the training practical or theoretical?</span><span>+</span></button><div class="faq-answer" data-i18n="a6">The emphasis is practical. Concepts are used to support exercises, discussion, and real workplace situations rather than become the main event.</div></div>
-          <div class="faq-item"><button type="button"><span data-i18n="q7">Can training be delivered in English or Ukrainian?</span><span>+</span></button><div class="faq-answer" data-i18n="a7">Training language can be agreed during the first conversation based on the participants and delivery context.</div></div>
-          <div class="faq-item"><button type="button"><span data-i18n="q8">How do we start?</span><span>+</span></button><div class="faq-answer" data-i18n="a8">Message Dmytro on LinkedIn with a short note about your team, role, or challenge. The next step is a focused conversation about what would be useful.</div></div>
+        <div class="faq-wrap">
+          <div></div>
+          <div class="faq">
+            <div class="faq-item open"><button type="button" aria-expanded="true"><span data-i18n="q1">Is the training available online?</span><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></button><div class="faq-answer"><div><p data-i18n="a1">Yes. Online and offline formats are both possible; the right option depends on the team and session goals.</p></div></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false"><span data-i18n="q2">Can the program be customized for our team?</span><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></button><div class="faq-answer"><div><p data-i18n="a2">Yes. The process starts by identifying the real communication, leadership, or collaboration needs, then selecting relevant modules and exercises.</p></div></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false"><span data-i18n="q3">Is this suitable for IT teams?</span><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></button><div class="faq-answer"><div><p data-i18n="a3">Yes. A core focus is communication between technical and non-technical people, including developers, QA, PMs, clients, and business stakeholders.</p></div></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false"><span data-i18n="q4">How long does a training session last?</span><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></button><div class="faq-answer"><div><p data-i18n="a4">Session length is agreed based on the topic, audience, and level of practice needed. Short focused sessions and broader workshop formats are both available.</p></div></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false"><span data-i18n="q5">Can you train managers and team leads?</span><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></button><div class="faq-answer"><div><p data-i18n="a5">Yes. Relevant topics include leadership communication, feedback, conflict resolution, delegation, stakeholder management, and decision-making.</p></div></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false"><span data-i18n="q6">Is the training practical or theoretical?</span><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></button><div class="faq-answer"><div><p data-i18n="a6">The emphasis is practical. Concepts are used to support exercises, discussion, and real workplace situations rather than become the main event.</p></div></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false"><span data-i18n="q7">Can training be delivered in English or Ukrainian?</span><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></button><div class="faq-answer"><div><p data-i18n="a7">Training language can be agreed during the first conversation based on the participants and delivery context.</p></div></div></div>
+            <div class="faq-item"><button type="button" aria-expanded="false"><span data-i18n="q8">How do we start?</span><svg class="i" aria-hidden="true"><use href="#i-plus"/></svg></button><div class="faq-answer"><div><p data-i18n="a8">Message Dmytro on LinkedIn with a short note about your team, role, or challenge. The next step is a focused conversation about what would be useful.</p></div></div></div>
+          </div>
         </div>
       </div>
     </section>
@@ -561,57 +776,62 @@
     <section class="cta">
       <div class="wrap">
         <div class="cta-box">
+          <div class="kicker" data-i18n="final.kicker">The next step</div>
           <div>
-            <div class="kicker" style="color:#fff1eb" data-i18n="final.kicker">The next step</div>
-            <h2 data-i18n="final.title">Have a team challenge worth discussing?</h2>
+            <h2 data-i18n-html="final.title">Have a team challenge <span class="mark">worth discussing</span>?</h2>
             <p data-i18n="final.text">Send me a message on LinkedIn. Tell me who the training is for and what needs to work better. We can start from there.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://www.linkedin.com/in/dmytro-stephen/" target="_blank" rel="noopener"><span data-i18n="cta.messageD">Message Dmytro on LinkedIn</span><svg class="i i-sm" aria-hidden="true"><use href="#i-out"/></svg></a>
+            </div>
           </div>
-          <div><a class="btn" href="https://www.linkedin.com/in/dmytro-stephen/" target="_blank" rel="noopener" data-i18n="cta.messageD">Message Dmytro on LinkedIn ↗</a></div>
         </div>
       </div>
     </section>
   </main>
 
-  <div class="mobile-cta"><a class="btn btn-primary" href="https://www.linkedin.com/in/dmytro-stephen/" target="_blank" rel="noopener" data-i18n="cta.messageD">Message Dmytro on LinkedIn ↗</a></div>
+  <div class="mobile-cta"><a class="btn btn-primary" href="https://www.linkedin.com/in/dmytro-stephen/" target="_blank" rel="noopener"><span data-i18n="cta.messageD">Message Dmytro on LinkedIn</span><svg class="i i-sm" aria-hidden="true"><use href="#i-out"/></svg></a></div>
 
   <footer>
     <div class="wrap footer-grid">
       <div>© <span id="year"></span> Dmytro Stephen · <span data-i18n="footer.tag">Soft Skills Mastery for Pragmatic Professionals</span></div>
-      <a href="https://www.linkedin.com/in/dmytro-stephen/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://www.linkedin.com/in/dmytro-stephen/" target="_blank" rel="noopener">LinkedIn<svg class="i i-sm" aria-hidden="true"><use href="#i-out"/></svg></a>
     </div>
   </footer>
 
   <script>
     const ua = {
+      "proof.yearsUnit":"років",
+      "demo.title":"Те саме повідомлення, але зрозуміліше","demo.note":"Приклади для ілюстрації того, як звучить чіткіша робоча комунікація","demo.t1":"Техніка → бізнес","demo.t2":"Feedback","demo.t3":"Підсумок зустрічі","demo.before":"До","demo.after":"Після",
+      "map.dev":"Розробники","map.qa":"QA","map.pm":"Продукт","map.client":"Клієнти","map.sales":"Продажі","map.mgr":"Менеджери","map.hr":"HR","map.hub":"Спільне рішення",
       "brand.tag":"Soft Skills для прагматичних професіоналів",
       "nav.services":"Послуги","nav.modules":"Модулі","nav.about":"Про мене","nav.faq":"FAQ",
-      "cta.message":"Написати в LinkedIn ↗","cta.explore":"Переглянути формати навчання ↓","cta.messageD":"Написати Дмитру в LinkedIn ↗",
+      "cta.message":"Написати в LinkedIn","cta.explore":"Переглянути формати навчання","cta.messageD":"Написати Дмитру в LinkedIn",
       "hero.eyebrow":"Dmytro Stephen · Практичне навчання soft skills",
-      "hero.title":"Soft Skills Mastery для <span class='accent'>прагматичних професіоналів.</span>",
+      "hero.title":"Soft skills mastery для <span class='mark'>прагматичних професіоналів</span>",
       "hero.promise":"Я допомагаю технічним експертам та операційним лідерам розвивати комунікаційні й лідерські навички, потрібні для реальних бізнес-результатів.",
       "hero.sub":"Для професіоналів і команд, які працюють на перетині бізнесу, технологій, людей та змін — практичні інструменти, бізнес-контекст і без мотиваційного шуму.",
       "hero.cardLabel":"Прагматичний погляд",
       "hero.quote":"«Hard skills допомагають потрапити в кімнату. <strong>Soft skills допомагають команді узгоджуватися, вирішувати, виконувати й будувати довіру.</strong>»",
-      "hero.signature":"Бізнес · Технології · Людські навички",
+      "hero.signature":"Бізнес, технології та людські навички",
       "proof.years":"поєднуючи технології з реальними потребами бізнесу",
       "proof.bridgeTitle":"Бізнес × Технології",
       "proof.bridge":"досвід у business development, партнерствах, технологічному консалтингу, AI та digital transformation",
       "proof.modeTitle":"Практичний підхід",
       "proof.mode":"навчання навколо розмов, рішень, стейкхолдерів і ситуацій, з якими люди справді працюють",
-      "reality.kicker":"Reality check","reality.title":"Навіть чудові плани залежать від людей.",
+      "reality.kicker":"Reality check","reality.title":"Навіть чудові плани залежать від людей",
       "reality.lead":"Технологія може бути чудовою, а стратегія — сильною. Але виконання сповільнюється, коли комунікація нечітка, відповідальність розмита, зворотний зв’язок відкладають, а бізнес і технічні команди перестають розуміти одне одного.",
-      "reality.bigTitle":"Людський шар — це частина операційної інфраструктури.",
+      "reality.bigTitle":"Людський шар — це частина операційної інфраструктури",
       "reality.bigText":"Чітка комунікація, корисний feedback, впевнені презентації, продумані переговори та здоровий конфлікт — не «приємне доповнення». Вони визначають, <strong>як рухається робота.</strong>",
       "reality.symptoms":"Типові симптоми","reality.symptomsText":"Непорозуміння між бізнесом і технічною командою. Слабкі розмови з клієнтами. Зустрічі без рішень. Запізнілий feedback. Презентації, де губиться головна думка. Менеджери виконують роботу замість того, щоб вести команду.",
       "chip.communication":"Нечітка комунікація","chip.collab":"Тертя між командами","chip.feedback":"Слабкий feedback","chip.decisions":"Повільні рішення","chip.client":"Неузгодженість із клієнтом",
-      "now.kicker":"Чому зараз","now.title":"AI підвищує цінність виразно людської роботи.",
+      "now.kicker":"Чому зараз","now.title":"AI підвищує цінність виразно людської роботи",
       "now.lead":"Коли автоматизація бере на себе більше рутинних задач, професіоналам усе ще потрібно правильно формулювати проблеми, ставити кращі питання, пояснювати компроміси, впливати без зайвого шуму, працювати з незгодою та приймати сильні рішення разом з іншими. Технічна компетентність важлива. Людська компетентність допомагає перетворити її на бізнес-цінність.",
-      "services.kicker":"Що я пропоную","services.title":"Зрозумілі формати. Корисна робота.",
+      "services.kicker":"Що я пропоную","services.title":"Зрозумілі формати, корисна робота",
       "services.lead":"Оберіть рівень під конкретну задачу: індивідуальний розвиток, сфокусована робота з командою або допомога в узгодженні бізнесу й технічних стейкхолдерів.",
-      "services.one.title":"1-on-1 менторство","services.one.text":"Індивідуальна робота для професіоналів, які переходять у лідерські ролі, комунікують у важливіших ситуаціях або беруть на себе більшу бізнес-відповідальність.","services.one.best":"Найкраще для: особистого розвитку + реальних ситуацій",
-      "services.two.title":"Командні воркшопи","services.two.text":"Практичні сесії з кросфункціональної комунікації, вирішення конфліктів, stakeholder management, feedback, презентацій, переговорів і співпраці.","services.two.best":"Найкраще для: спільних звичок + командного вирівнювання",
-      "services.three.title":"Стратегічний консалтинг","services.three.text":"Практична підтримка технічних і бізнес-команд, яким потрібно говорити однією мовою, чіткіше узгоджувати очікування та покращувати важливі робочі розмови.","services.three.best":"Найкраще для: системного кросфункціонального тертя",
-      "modules.kicker":"Модулі навчання","modules.title":"Навички, прив’язані до реальної роботи.",
+      "services.one.title":"1-on-1 менторство","services.one.text":"Індивідуальна робота для професіоналів, які переходять у лідерські ролі, комунікують у важливіших ситуаціях або беруть на себе більшу бізнес-відповідальність.","services.one.best":"Найкраще для особистого розвитку та реальних ситуацій",
+      "services.two.title":"Командні воркшопи","services.two.text":"Практичні сесії з кросфункціональної комунікації, вирішення конфліктів, stakeholder management, feedback, презентацій, переговорів і співпраці.","services.two.best":"Найкраще для спільних звичок і командного вирівнювання",
+      "services.three.title":"Стратегічний консалтинг","services.three.text":"Практична підтримка технічних і бізнес-команд, яким потрібно говорити однією мовою, чіткіше узгоджувати очікування та покращувати важливі робочі розмови.","services.three.best":"Найкраще для системного кросфункціонального тертя",
+      "modules.kicker":"Модулі навчання","modules.title":"Навички, прив’язані до реальної роботи",
       "modules.lead":"Модулі можуть працювати окремо або об’єднуватися в індивідуальну програму навколо розмов, ролей і бізнес-ситуацій вашої команди.",
       "label.outcome":"Результат:",
       "m1.title":"Бізнес-комунікація","m1.desc":"Робіть ідеї зрозумілішими, рішення — простішими, а співпрацю — стабільнішою.","m1.a":"Чітке та структуроване мислення","m1.b":"Активне слухання","m1.c":"Ділове письмо","m1.d":"Комунікація між технічними й нетехнічними командами","m1.outcome":"менше неоднозначності та більше корисних розмов.",
@@ -620,24 +840,22 @@
       "m4.title":"Переговори та комунікація з клієнтами","m4.desc":"Покращуйте розмови про цінність, очікування, компроміси та складні теми з клієнтами й стейкхолдерами.","m4.a":"Навички переговорів","m4.b":"Клієнтська комунікація","m4.c":"Stakeholder management","m4.d":"Побудова відносин","m4.outcome":"чіткіші очікування й продуктивніші комерційні розмови.",
       "m5.title":"Співпраця Бізнес × Tech","m5.desc":"Допомагайте developers, QA, PM, менеджерам, клієнтам і бізнес-стейкхолдерам працювати з меншими «втратами при перекладі».","m5.a":"Кросфункціональна співпраця","m5.b":"Комунікація від технічного до бізнесового","m5.c":"Критичне мислення","m5.d":"Формулювання рішень","m5.outcome":"краще узгодження пріоритетів, обмежень і рішень.",
       "m6.title":"Людські навички в епоху AI","m6.desc":"Розвивайте судження й комунікаційні звички, що допомагають продуктивно використовувати AI, не віддаючи йому власне мислення.","m6.a":"Адаптивність","m6.b":"Співпраця людини й AI","m6.c":"Критичне мислення та судження","m6.d":"Особистий бренд у LinkedIn","m6.outcome":"більш усвідомлене використання AI та сильніший людський внесок поруч із ним.",
-      "aud.kicker":"Для кого","aud.title":"Для людей, чия робота залежить від інших людей.","aud.lead":"Особливо корисно там, де експертиза має проходити крізь ролі, департаменти, клієнтів і різні рівні seniority.",
+      "aud.kicker":"Для кого","aud.title":"Для людей, чия робота залежить від інших людей","aud.lead":"Особливо корисно там, де експертиза має проходити крізь ролі, департаменти, клієнтів і різні рівні seniority.",
       "aud.1t":"Менеджери й team leads","aud.1x":"Лідерство, feedback, делегування, конфлікти, рішення.","aud.2t":"HR і people teams","aud.2x":"Практичні програми розвитку для співробітників і менеджерів.","aud.3t":"IT та технологічні команди","aud.3x":"Краща співпраця між developers, QA, PM, клієнтами та бізнесом.","aud.4t":"Sales і business development","aud.4x":"Переговори, презентації, клієнтські розмови, побудова відносин.","aud.5t":"Project managers","aud.5x":"Stakeholder alignment, складні розмови, ясність рішень.","aud.6t":"Фаундери","aud.6x":"Лідерська комунікація з командами, партнерами та клієнтами.","aud.7t":"Майбутні лідери","aud.7x":"Впевненість і комунікація для ширшої відповідальності.","aud.8t":"Індивідуальні професіонали","aud.8x":"Комунікація, публічні виступи, лідерство та професійна видимість.",
-      "formats.kicker":"Формати навчання","formats.title":"Формат під потребу, а не навпаки.","formats.lead":"Формат має служити бізнес-задачі.",
-      "f1.t":"Корпоративні воркшопи","f1.x":"Для сфокусованого розвитку навички навколо спільної командної проблеми.","f2.t":"Командні тренінги","f2.x":"Коли команді потрібні спільна мова, звички та практика.","f3.t":"1-on-1 менторство","f3.x":"Для переходу в лідерство, чутливих ситуацій або індивідуального розвитку.","f4.t":"Короткі практичні сесії","f4.x":"Для однієї конкретної навички або повторюваної проблеми, де потрібне швидке застосування.","f5.t":"Онлайн-навчання","f5.x":"Для розподілених команд і гнучкої участі.","f6.t":"Офлайн-навчання","f6.x":"Для глибшої практики, живої дискусії та командної взаємодії.","f7.t":"Індивідуальна програма для компанії","f7.x":"Коли потрібно розвинути кілька навичок навколо конкретних ролей або процесів.","f8.t":"LinkedIn / personal branding воркшоп","f8.x":"Для професіоналів, яким потрібне чіткіше позиціонування й сильніша професійна видимість.",
-      "results.kicker":"Очікувані результати","results.title":"Практичні зміни, які видно в роботі.","results.lead":"Мета — не «трансформація особистості», а краща професійна поведінка в ситуаціях, які впливають на команди, клієнтів і delivery.",
+      "formats.kicker":"Формати навчання","formats.title":"Формат під потребу, а не навпаки","formats.lead":"Формат має служити бізнес-задачі.",
+      "f1.t":"Корпоративні воркшопи","f1.x":"Для сфокусованого розвитку навички навколо спільної командної проблеми.","f2.t":"Командні тренінги","f2.x":"Коли команді потрібні спільна мова, звички та практика.","f3.t":"1-on-1 менторство","f3.x":"Для переходу в лідерство, чутливих ситуацій або індивідуального розвитку.","f4.t":"Короткі практичні сесії","f4.x":"Для однієї конкретної навички або повторюваної проблеми, де потрібне швидке застосування.","f5.t":"Онлайн-навчання","f5.x":"Для розподілених команд і гнучкої участі.","f6.t":"Офлайн-навчання","f6.x":"Для глибшої практики, живої дискусії та командної взаємодії.","f7.t":"Індивідуальна програма для компанії","f7.x":"Коли потрібно розвинути кілька навичок навколо конкретних ролей або процесів.","f8.t":"Воркшоп з LinkedIn та особистого бренду","f8.x":"Для професіоналів, яким потрібне чіткіше позиціонування й сильніша професійна видимість.",
+      "results.kicker":"Очікувані результати","results.title":"Практичні зміни, які видно в роботі","results.lead":"Мета — не «трансформація особистості», а краща професійна поведінка в ситуаціях, які впливають на команди, клієнтів і delivery.",
       "r1":"Чіткіша комунікація","r2":"Краще командне вирівнювання","r3":"Сильніші клієнтські розмови","r4":"Впевненіші презентації","r5":"Краще опрацювання конфліктів","r6":"Сильніша лідерська комунікація","r7":"Плавніша кросфункціональна співпраця","r8":"Більш усвідомлена адаптація до AI-enabled роботи",
-      "about.photo":"Замініть цей блок професійним портретом Dmytro.",
       "about.kicker":"Про тренера","about.p1":"Dmytro має 12+ років досвіду допомоги компаніям у поєднанні технологій з реальними потребами бізнесу. Його досвід охоплює business development, партнерства, технологічний консалтинг, AI, digital transformation і практичні бізнес-рішення.",
       "about.p2":"Його погляд сформований практичною роботою в retail, defense, utility та AI partnerships, включно з досвідом, пов’язаним із Miatech і LaSoft Software Development. Навчання спирається на реальний операційний контекст, а не абстрактну управлінську теорію.",
       "about.p3":"Спільна тема — переклад: допомогти технічним людям розуміти бізнес-пріоритети, бізнесу — технічні реалії, а обом сторонам — комунікувати достатньо добре, щоб рухатися вперед.",
       "about.grayTitle":"Перевага «Gray Beard»","about.grayText":"Pattern recognition, зароблений роками реальних розмов, змін ринку, складних компромісів, роботи з клієнтами, командами й технологічними зсувами — без корпоративного театру.",
-      "about.linkedin":"Переглянути LinkedIn ↗",
-      "why.kicker":"Чому працювати зі мною","why.title":"Спочатку — бізнес-контекст.","why.lead":"Це soft-skills навчання для людей, у яких є дедлайни, стейкхолдери, клієнти, системи, обмеження й вимірювана робота.",
+      "about.linkedin":"Переглянути LinkedIn",
+      "why.kicker":"Чому працювати зі мною","why.title":"Спочатку — бізнес-контекст","why.lead":"Це soft-skills навчання для людей, у яких є дедлайни, стейкхолдери, клієнти, системи, обмеження й вимірювана робота.",
       "why.1t":"Бізнес-досвід","why.1x":"Навчання прив’язане до того, як компанії комунікують, продають, виконують, будують партнерства й приймають рішення.","why.2t":"Технологічна грамотність","why.2x":"Корисно там, де технічні деталі та бізнес-контекст мають зустрітися без втрати змісту.","why.3t":"Практика важливіша за теорію","why.3x":"Вправи, приклади й дискусії побудовані навколо ситуацій, з якими учасники справді стикаються.",
-      "process.kicker":"Як це працює","process.title":"Просто: від першої розмови до follow-up.","process.lead":"Без надмірної архітектури тренінгу до того, як стане зрозуміло, яку проблему варто вирішити.",
+      "process.kicker":"Як це працює","process.title":"Просто: від першої розмови до follow-up","process.lead":"Без надмірної архітектури тренінгу до того, як стане зрозуміло, яку проблему варто вирішити.",
       "p1.t":"Discovery call","p1.x":"Коротка розмова про команду, контекст і бажане покращення.","p2.t":"Визначення потреб","p2.x":"Фіксуємо проблеми комунікації, лідерства або співпраці, які справді варто вирішити.","p3.t":"Адаптація плану","p3.x":"Обираємо модулі, приклади, формат і потрібний рівень практики.","p4.t":"Практичні сесії","p4.x":"Працюємо з frameworks, вправами, дискусією та застосуванням.","p5.t":"Follow-up","p5.x":"Вправи й рекомендації, які допомагають перенести навчання в роботу.",
-      "social.kicker":"Social proof","social.title":"Тут можна додати відгуки.","social.text":"Секція готова для перевірених відгуків клієнтів, LinkedIn recommendations, логотипів компаній, feedback після тренінгів або прикладів попередніх сесій.",
-      "faq.title":"Корисні питання до першої розмови.","faq.lead":"Програму можна сформувати навколо людей, ситуації та бізнес-цілі, а не підганяти під жорсткий шаблон.",
+      "faq.title":"Корисні питання до першої розмови","faq.lead":"Програму можна сформувати навколо людей, ситуації та бізнес-цілі, а не підганяти під жорсткий шаблон.",
       "q1":"Чи доступне навчання онлайн?","a1":"Так. Можливі онлайн та офлайн формати; вибір залежить від команди й цілей сесії.",
       "q2":"Чи можна адаптувати програму під нашу команду?","a2":"Так. Спочатку визначаємо реальні потреби в комунікації, лідерстві або співпраці, а потім підбираємо модулі й вправи.",
       "q3":"Чи підходить це для IT-команд?","a3":"Так. Один із ключових фокусів — комунікація між технічними й нетехнічними людьми, включно з developers, QA, PM, клієнтами та бізнес-стейкхолдерами.",
@@ -646,7 +864,7 @@
       "q6":"Це практичне чи теоретичне навчання?","a6":"Фокус — на практиці. Теорія використовується лише настільки, наскільки допомагає вправам, дискусії та реальним робочим ситуаціям.",
       "q7":"Чи може тренінг бути англійською або українською?","a7":"Мову навчання можна узгодити під час першої розмови залежно від учасників і формату.",
       "q8":"Як почати?","a8":"Напишіть Dmytro в LinkedIn і коротко опишіть команду, роль або виклик. Наступний крок — сфокусована розмова про те, що буде справді корисним.",
-      "final.kicker":"Наступний крок","final.title":"Є командний виклик, який варто обговорити?","final.text":"Напишіть мені в LinkedIn. Скажіть, для кого потрібне навчання і що має працювати краще. Почнемо звідси.",
+      "final.kicker":"Наступний крок","final.title":"Є командний виклик, який <span class='mark'>варто обговорити</span>?","final.text":"Напишіть мені в LinkedIn. Скажіть, для кого потрібне навчання і що має працювати краще. Почнемо звідси.",
       "footer.tag":"Soft Skills Mastery для прагматичних професіоналів"
     };
 
@@ -665,20 +883,167 @@
         const v = dict[el.dataset.i18nHtml];
         if (v !== undefined) el.innerHTML = v;
       });
-      document.getElementById("enBtn").classList.toggle("active", lang === "en");
-      document.getElementById("uaBtn").classList.toggle("active", lang === "ua");
-      localStorage.setItem("ds-lang", lang);
+      [["enBtn","en"],["uaBtn","ua"]].forEach(([id, code]) => {
+        const b = document.getElementById(id);
+        b.classList.toggle("active", lang === code);
+        b.setAttribute("aria-pressed", String(lang === code));
+      });
+      try { localStorage.setItem("ds-lang", lang); } catch (e) {}
+      if (window.demo) { demo.lang = lang; demo.show(demo.scene); }
+      if (window.fitMap) fitMap();
     }
 
     document.getElementById("enBtn").addEventListener("click", () => applyLang("en"));
     document.getElementById("uaBtn").addEventListener("click", () => applyLang("ua"));
 
+    const shell = document.getElementById("navShell");
+    const menuBtn = document.getElementById("menuBtn");
+    const setMenu = open => { shell.classList.toggle("nav-open", open); menuBtn.setAttribute("aria-expanded", String(open)); };
+    menuBtn.addEventListener("click", () => setMenu(!shell.classList.contains("nav-open")));
+    document.querySelectorAll("#navLinks > a").forEach(a => a.addEventListener("click", () => setMenu(false)));
+
     document.querySelectorAll(".faq-item button").forEach(btn => {
-      btn.addEventListener("click", () => btn.closest(".faq-item").classList.toggle("open"));
+      btn.addEventListener("click", () => {
+        const open = btn.closest(".faq-item").classList.toggle("open");
+        btn.setAttribute("aria-expanded", String(open));
+      });
     });
 
+
+    /* ---------- demo scenes ---------- */
+    const scenes = {
+      en: [
+        { who:"Developer to client",
+          before:"We need to refactor the auth module before integrating SSO, otherwise tech debt grows and the regression surface gets bigger.",
+          after:"Single sign-on will take two more weeks. That time makes login safer and keeps future changes from breaking it. Can you confirm the new date by Friday?",
+          notes:["Impact before mechanism","A date instead of a risk","One clear ask"] },
+        { who:"Manager to team member",
+          before:"The report was kind of off. Maybe be more careful next time?",
+          after:"Two totals in Tuesday’s report didn’t match the dashboard, and the client noticed. Before the next one goes out, let’s check the numbers together for ten minutes.",
+          notes:["Specific, not vague","Says why it matters","A next step, not blame"] },
+        { who:"Project lead to the team",
+          before:"Good discussion, everyone. Let’s sync on this and circle back next week.",
+          after:"We’re launching on the 21st, not the 14th. Olena owns the release checklist, and I’ll send the summary with open questions by 5 pm today.",
+          notes:["Decision stated first","A named owner","Time-bound follow-up"] }
+      ],
+      ua: [
+        { who:"Розробник — клієнту",
+          before:"Перед інтеграцією SSO нам треба зробити рефакторинг auth-модуля, інакше накопичиться техборг і зросте ризик регресій.",
+          after:"Єдиний вхід (SSO) займе ще два тижні. Цей час зробить вхід безпечнішим і вбереже його від поломок під час майбутніх змін. Чи можете підтвердити нову дату до п’ятниці?",
+          notes:["Спершу вплив, потім механіка","Дата замість ризику","Одне чітке прохання"] },
+        { who:"Менеджер — члену команди",
+          before:"Звіт був якийсь не такий. Може, наступного разу уважніше?",
+          after:"Дві суми у вівторковому звіті не збіглися з дашбордом, і клієнт це помітив. Перед наступним звітом давай разом звіримо цифри — це десять хвилин.",
+          notes:["Конкретно, а не розмито","Пояснює, чому це важливо","Наступний крок, а не звинувачення"] },
+        { who:"Керівник проєкту — команді",
+          before:"Гарне обговорення, всім дякую. Давайте синхронізуємось і повернемось до цього наступного тижня.",
+          after:"Запускаємося 21-го, а не 14-го. Чекліст релізу веде Олена, а я надішлю підсумок із відкритими питаннями сьогодні до 17:00.",
+          notes:["Спершу рішення","Названий відповідальний","Наступний крок із часом"] }
+      ]
+    };
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const demo = {
+      el: document.getElementById("demo"), scene: 0, lang: "en", timer: null, typer: null, inView: false, paused: false, start: 0, hold: 4200,
+      tabs: [...document.querySelectorAll(".demo-tabs button")],
+      show(i){
+        this.scene = i;
+        const d = scenes[this.lang][i];
+        clearInterval(this.typer); clearTimeout(this.timer);
+        this.tabs.forEach((t, n) => t.setAttribute("aria-selected", String(n === i)));
+        document.getElementById("demoWho").textContent = d.who;
+        document.getElementById("demoWho2").textContent = d.who;
+        document.getElementById("demoBefore").textContent = d.before;
+        document.getElementById("demoGhost").textContent = d.after;
+        const out = document.getElementById("demoAfter");
+        const caret = this.el.querySelector(".caret");
+        const notes = document.getElementById("demoNotes");
+        notes.innerHTML = d.notes.map((n, k) => `<li style="--d:${k * 90}ms"><svg class="i i-sm" aria-hidden="true"><use href="#i-check"/></svg>${n}</li>`).join("");
+        const bar = document.getElementById("demoBar");
+        bar.style.transition = "none"; bar.style.transform = "scaleX(0)";
+        this.running = !reduceMotion && this.inView;
+        const finish = () => {
+          caret.classList.add("done");
+          requestAnimationFrame(() => notes.querySelectorAll("li").forEach(li => li.classList.add("in")));
+          if (!this.running) return;
+          requestAnimationFrame(() => { bar.style.transition = `transform ${this.hold}ms linear`; bar.style.transform = "scaleX(1)"; });
+          this.timer = setTimeout(() => this.next(), this.hold);
+        };
+        if (reduceMotion || !this.inView) { out.textContent = d.after; finish(); return; }
+        out.textContent = ""; caret.classList.remove("done");
+        let n = 0; const chars = [...d.after];
+        this.typer = setInterval(() => {
+          if (this.paused) return;
+          n += 2; out.textContent = chars.slice(0, n).join("");
+          if (n >= chars.length) { clearInterval(this.typer); finish(); }
+        }, 28);
+      },
+      next(){
+        if (!this.inView) { this.running = false; return; }
+        if (this.paused) { this.timer = setTimeout(() => this.next(), 600); return; }
+        this.show((this.scene + 1) % scenes.en.length);
+      }
+    };
+    demo.tabs.forEach(t => t.addEventListener("click", () => demo.show(Number(t.dataset.scene))));
+    demo.el.addEventListener("mouseenter", () => demo.paused = true);
+    demo.el.addEventListener("mouseleave", () => demo.paused = false);
+    demo.el.addEventListener("focusin", () => demo.paused = true);
+    demo.el.addEventListener("focusout", () => demo.paused = false);
+    new IntersectionObserver(([e]) => {
+      demo.inView = e.isIntersecting;
+      if (demo.inView && !demo.running) demo.show(demo.scene);
+    }, { threshold: .35 }).observe(demo.el);
+
+    /* ---------- audience map: fit labels, pause off screen ---------- */
+    const map = document.getElementById("audMap");
+    function fitMap(){
+      map.querySelectorAll(".node").forEach(g => {
+        const t = g.querySelector("text"), r = g.querySelector("rect");
+        const pad = g.classList.contains("hub") ? 20 : 14;
+        const w = t.getBBox().width + pad * 2;
+        r.setAttribute("width", w.toFixed(1));
+        r.setAttribute("x", (Number(t.getAttribute("x")) - w / 2).toFixed(1));
+      });
+    }
+    if (reduceMotion) map.pauseAnimations();
+    else new IntersectionObserver(([e]) => e.isIntersecting ? map.unpauseAnimations() : map.pauseAnimations()).observe(map);
+
+    /* ---------- scroll reveals ---------- */
+    const groups = [".section-head", ".statement", ".row", ".module", ".aud", ".format-col", ".result-grid", ".col", ".faq", ".cta-box", ".demo", ".proofitem", ".graybeard"];
+    const io = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add("in"); io.unobserve(e.target);
+    }), { threshold: .12, rootMargin: "0px 0px -40px 0px" });
+    document.querySelectorAll(groups.join(",")).forEach(el => {
+      const key = el.classList[0];
+      const sibs = [...el.parentElement.children].filter(c => c.classList.contains(key));
+      el.style.setProperty("--d", `${Math.min(sibs.indexOf(el), 5) * 60}ms`);
+      el.classList.add("rv");
+      reduceMotion ? el.classList.add("in") : io.observe(el);
+    });
+    map.classList.add("rv"); reduceMotion ? map.classList.add("in") : io.observe(map);
+    const proc = document.querySelector(".process");
+    proc.querySelectorAll(".step").forEach((st, k) => st.style.setProperty("--d", `${k * 160}ms`));
+    reduceMotion ? proc.classList.add("in") : io.observe(proc);
+
+    /* ---------- count up ---------- */
+    document.querySelectorAll(".count").forEach(el => {
+      const to = Number(el.dataset.to);
+      if (reduceMotion) return;
+      el.textContent = "0";
+      new IntersectionObserver(([e], obs) => {
+        if (!e.isIntersecting) return; obs.disconnect();
+        const t0 = performance.now(), dur = 1100;
+        const tick = now => { const p = Math.min(1, (now - t0) / dur); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); };
+        requestAnimationFrame(tick);
+      }).observe(el);
+    });
+
+    window.demo = demo; window.fitMap = fitMap;
+    if (document.fonts) document.fonts.ready.then(fitMap);
     document.getElementById("year").textContent = new Date().getFullYear();
-    applyLang(localStorage.getItem("ds-lang") || "en");
+    let saved = "en";
+    try { saved = localStorage.getItem("ds-lang") || "en"; } catch (e) {}
+    applyLang(saved);
   </script>
 </body>
 </html>
